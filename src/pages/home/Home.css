@@ -1,0 +1,62 @@
+.home-container{
+  position:relative;
+
+  width:100%;
+  min-height:100vh;
+
+  overflow:hidden;
+
+  background:#050816;
+}
+
+/* Glow top-right */
+
+.home-container::before{
+  content:"";
+
+  position:fixed;
+
+  width:600px;
+  height:600px;
+
+  top:-250px;
+  right:-250px;
+
+  border-radius:50%;
+
+  background:#7c3aed;
+
+  opacity:0.15;
+
+  filter:blur(140px);
+
+  z-index:0;
+
+  pointer-events:none;
+}
+
+/* Glow bottom-left */
+
+.home-container::after{
+  content:"";
+
+  position:fixed;
+
+  width:500px;
+  height:500px;
+
+  bottom:-200px;
+  left:-200px;
+
+  border-radius:50%;
+
+  background:#2563eb;
+
+  opacity:0.12;
+
+  filter:blur(140px);
+
+  z-index:0;
+
+  pointer-events:none;
+}

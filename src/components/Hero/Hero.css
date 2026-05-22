@@ -1,0 +1,211 @@
+.hero{
+  position:relative;
+
+  width:100%;
+  height:100vh;
+
+  overflow:hidden;
+}
+
+/* SLIDES */
+
+.hero-slide{
+  position:absolute;
+
+  inset:0;
+
+  opacity:0;
+
+  transition:opacity 1s ease;
+}
+
+.hero-slide.active{
+  opacity:1;
+
+  z-index:1;
+}
+
+/* VIDEO */
+
+.hero-video{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+}
+
+/* OVERLAY */
+
+.hero-overlay{
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.82),
+      rgba(0,0,0,0.25),
+      rgba(0,0,0,0.55)
+    );
+}
+
+/* CONTENT */
+
+.hero-content{
+  position:absolute;
+
+  left:50%;
+  bottom:80px;
+
+  transform:translateX(-50%);
+
+  width:100%;
+
+  padding:0 24px;
+
+  text-align:center;
+
+  z-index:2;
+}
+
+.hero-content h1{
+  white-space:pre-line;
+
+  color:white;
+
+  font-size:92px;
+
+  line-height:0.92;
+
+  letter-spacing:-5px;
+
+  font-weight:900;
+
+  margin-bottom:22px;
+
+  text-transform:uppercase;
+}
+
+.hero-content p{
+  color:#f3f4f6;
+
+  font-size:22px;
+
+  margin-bottom:34px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+  display:flex;
+
+  justify-content:center;
+
+  gap:18px;
+}
+
+.hero-btn-primary{
+  padding:16px 30px;
+
+  border-radius:999px;
+
+  background:#ffa51a;
+
+  color:#050816;
+
+  font-weight:700;
+
+  transition:0.3s ease;
+}
+
+.hero-btn-primary:hover{
+  transform:translateY(-3px);
+}
+
+.hero-btn-secondary{
+  padding:16px 30px;
+
+  border-radius:999px;
+
+  background:rgba(255,255,255,0.08);
+
+  border:1px solid rgba(255,255,255,0.12);
+
+  backdrop-filter:blur(10px);
+
+  color:white;
+}
+
+/* DOTS */
+
+.hero-dots{
+  position:absolute;
+
+  bottom:24px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  display:flex;
+
+  gap:12px;
+
+  z-index:5;
+}
+
+.dot{
+  width:12px;
+  height:12px;
+
+  border-radius:50%;
+
+  background:rgba(255,255,255,0.35);
+
+  transition:0.3s ease;
+}
+
+.active-dot{
+  background:#ffa51a;
+
+  transform:scale(1.25);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .hero-content h1{
+    font-size:58px;
+
+    letter-spacing:-2px;
+  }
+
+  .hero-content p{
+    font-size:18px;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .hero-content{
+    bottom:70px;
+  }
+
+  .hero-content h1{
+    font-size:40px;
+
+    line-height:1;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary{
+    width:100%;
+  }
+
+}
