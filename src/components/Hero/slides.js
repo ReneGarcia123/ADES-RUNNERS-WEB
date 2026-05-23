@@ -15,10 +15,8 @@ const slides = [
   {
     id: 2,
     video: "https://res.cloudinary.com/ddt2qucrw/video/upload/v1779491393/Los_andenes_de_Chiguata_trail_r2ivju.mp4",
-    title: `CORRE.
-          SUPÉRATE.
-          DISFRUTA.`,
-    subtitle: "Entrenamientos y comunidad",
+    title: `SÚPER MAMÁ EN LA META`,
+    subtitle: "Trote conmemorativo por el día de la Madre",
     primaryBtn: "Ver Evento",
     primaryLink:"/nosotros",
     secondaryBtn: "BASES GENERALES",

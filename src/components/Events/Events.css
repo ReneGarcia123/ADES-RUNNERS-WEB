@@ -1,0 +1,100 @@
+.events-section {
+  padding: 40px 20px 80px 20px;
+  color: white;
+  text-align: center;
+  margin-top: 0;
+}
+
+/* HEADER */
+.events-header h2 {
+  font-size: 52px;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+.events-header p {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  color: rgba(255,255,255,0.6);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* GRID */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* CARD */
+.event-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+
+  /* shadow hacia afuera */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* HOVER LIFT */
+.event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  border-color: rgba(0, 255, 200, 0.35);
+}
+
+/* IMAGE */
+.event-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* CONTENT */
+.event-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.event-content h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.event-content p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* BUTTON */
+.event-btn {
+  background: #04ffca;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+  border-radius:999px;
+  color:#050816;
+  font-weight:600;
+}
+
+.event-btn:hover {
+  background: #03e6b8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}

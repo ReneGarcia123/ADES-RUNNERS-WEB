@@ -1,12 +1,12 @@
 .home-container{
   position:relative;
-
   width:100%;
   min-height:100vh;
-
   overflow:hidden;
-
   background:#050816;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
 }
 
 /* Glow top-right */
@@ -33,6 +33,7 @@
   z-index:0;
 
   pointer-events:none;
+
 }
 
 /* Glow bottom-left */
