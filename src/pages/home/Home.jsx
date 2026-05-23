@@ -1,6 +1,6 @@
 import Hero from "../../components/Hero/Hero.jsx";
 
-import "./home.css";
+import "./Home.css";
 
 function Home() {
   return (
