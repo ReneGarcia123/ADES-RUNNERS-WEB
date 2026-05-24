@@ -1,5 +1,5 @@
 .events-section {
-  padding: 40px 20px 40px 20px;
+  padding: 0px 20px 40px 20px;
   color: white;
   text-align: center;
   margin-top: 0;
@@ -86,6 +86,8 @@
   border-radius:999px;
   color:#050816;
   font-weight:600;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .event-btn:hover {

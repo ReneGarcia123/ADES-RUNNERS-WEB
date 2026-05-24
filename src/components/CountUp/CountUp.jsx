@@ -14,6 +14,7 @@ import "./CountUp.css";
 
 export default function CountUp({
   value,
+  suffix="",
   label,
   from = 0,
   direction = "up",
@@ -99,16 +100,21 @@ export default function CountUp({
 
     <article className="countup-card">
 
-      <span
-        className="countup-number"
-        ref={ref}
-      />
+    <div className="countup-number">
 
-      <p className="countup-label">
-        {label}
-      </p>
+      <span className="countup-suffix">
+        {suffix}
+      </span>
 
-    </article>
+      <span ref={ref} />
+
+    </div>
+
+    <p className="countup-label">
+      {label}
+    </p>
+
+  </article>
 
   );
 }

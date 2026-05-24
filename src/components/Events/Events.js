@@ -3,7 +3,7 @@ const events = [
     id: 1,
     title: "JUNTAS SOMOS IMPARABLES",
     description: "Trote conmemorativo por el día de la mujer",
-    image: "https://res.cloudinary.com/ddt2qucrw/image/upload/v1779504437/WhatsApp_Image_2026-04-29_at_2.55.55_PM_arrw6n.jpg",
+    image: "https://res.cloudinary.com/ddt2qucrw/image/upload/v1779636830/MUJER_ki5ta3.jpg",
     button: "Más Información",
     redirect:"/eventos",
   },
