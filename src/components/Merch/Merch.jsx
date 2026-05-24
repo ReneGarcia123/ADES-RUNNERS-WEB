@@ -1,16 +1,20 @@
+import { useState } from "react";
 import "./Merch.css";
-
 import merchData from "./merchData";
-
-import { Link } from "react-router-dom";
+import MerchModal from "../MerchModal/MerchModal";
 
 export default function Merch() {
-
+  const [isModalOpen, setIsModalOpen] =
+    useState(false);
+    
+  const [selectedProduct, setSelectedProduct] =
+    useState(null);
   return (
 
     <section className="merch-section">
 
       {/* HEADER */}
+
       <div className="merch-header">
 
         <h2>
@@ -25,26 +29,36 @@ export default function Merch() {
       </div>
 
       {/* GRID */}
+
       <div className="merch-grid">
 
         {merchData.map((item) => (
 
-          <Link
+          <article
             key={item.id}
-            to={item.link}
             className="merch-card"
+            onClick={() => {
+
+              setSelectedProduct(item);
+
+              setIsModalOpen(true);
+
+            }}
           >
 
             {/* IMAGE */}
+
             <img
               src={item.image}
               alt={item.title}
             />
 
             {/* OVERLAY */}
+
             <div className="merch-overlay" />
 
             {/* CONTENT */}
+
             <div className="merch-content">
 
               <span>
@@ -57,11 +71,21 @@ export default function Merch() {
 
             </div>
 
-          </Link>
+          </article>
 
         ))}
 
       </div>
+
+      {/* MODAL */}
+
+      <MerchModal
+        isOpen={isModalOpen}
+        onClose={() =>
+          setIsModalOpen(false)
+        }
+        product={selectedProduct}
+      />
 
     </section>
 

@@ -4,7 +4,7 @@ const merchData = [
     title: "Polo Manga Corta",
     image:
       "https://res.cloudinary.com/ddt2qucrw/image/upload/v1779639326/INDUMENTARIA_osg6lj.jpg",
-    link: "/nosotros",
+    price:"S/40.00",
   },
 
   {
@@ -12,7 +12,7 @@ const merchData = [
     title: "Polo Manga Larga",
     image:
       "https://res.cloudinary.com/ddt2qucrw/image/upload/v1779640016/polo_largo_zs2brt.png",
-    link: "/nosotros",
+    price:"S/45.00",
   },
 
   {
@@ -20,7 +20,7 @@ const merchData = [
     title: "Bividi ADES",
     image:
       "https://res.cloudinary.com/ddt2qucrw/image/upload/v1779639610/VIVIDI_pgjxlj.jpg",
-    link: "/nosotros",
+    price: "S/.40.00",
   },
 
   {
@@ -28,7 +28,7 @@ const merchData = [
     title: "Gorra ADES",
     image:
       "https://images.unsplash.com/photo-1521369909029-2afed882baee",
-    link: "/nosotros",
+    price:"S/30.00"
   },
 ];
 
