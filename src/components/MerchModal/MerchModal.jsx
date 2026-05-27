@@ -1,5 +1,6 @@
 import { useEffect,useState } from "react";
 import "./MerchModal.css";
+import emailjs from "@emailjs/browser"
 
 const initialForm = {
   nombres: "",
@@ -150,35 +151,91 @@ export default function MerchModal({
   };
 
   const handleSubmit = async () => {
-    console.log("ENVIANDO...");
-
     if (!formData.voucher) {
 
         alert(
-        "Debes subir la constancia de pago."
+          "Debes subir la constancia de pago."
         );
 
         return;
-    }
+      }
 
-    try {
+      try {
 
         setLoading(true);
 
-        await new Promise((resolve) =>
-        setTimeout(resolve, 3000)
+        const fileToBase64 = (file) =>
+          new Promise((resolve, reject) => {
+
+            const reader = new FileReader();
+
+            reader.readAsDataURL(file);
+
+            reader.onload = () =>
+              resolve(reader.result);
+
+            reader.onerror = reject;
+          });
+
+        const base64 =
+          await fileToBase64(
+            formData.voucher
+          );
+
+        const payload = {
+
+          ...formData,
+
+          voucher: {
+            name: formData.voucher.name,
+            type: formData.voucher.type,
+            base64: base64.split(",")[1],
+          },
+        };
+
+        //Enviar datos al Google Sheet
+        await fetch(
+          "https://script.google.com/macros/s/AKfycbz-K4VO2NwyJeBqWUWHWgck7CkMwhYXJuR6nHPkL-LohOFohqlK3256Scw82BjmTIR8wQ/exec",
+          {
+            method: "POST",
+
+            body: JSON.stringify(payload),
+            mode:"no-cors" //negar al CORS
+          }
+        );
+
+        //Enviar Correo
+        await emailjs.send(
+
+          "service_6b38k6g",
+          "template_1zhnqpa",
+
+          {
+            nombres: formData.nombres,
+            correo: formData.correo,
+            prenda: formData.prenda,
+            talla: formData.talla,
+            nombrePolo: formData.nombrePolo,
+          },
+
+          "LdCqh-AJ8g67kmRHt"
         );
 
         setLoading(false);
 
         setSuccess(true);
 
-    } catch (error) {
+      } catch (error) {
 
         console.error(error);
 
+        alert(
+          "Error enviando solicitud."
+        );
+
         setLoading(false);
-    }
+      }
+
   };
 
   return (
@@ -349,7 +406,7 @@ export default function MerchModal({
               >
 
                 <option value="">
-                  Talla de Polo
+                  Talla de Prenda
                 </option>
 
                 <option>
@@ -373,7 +430,7 @@ export default function MerchModal({
               <input
                 type="text"
                 name="nombrePolo"
-                placeholder="Nombre para el polo"
+                placeholder="Nombre para la prenda"
                 required
                 value={formData.nombrePolo}
                 onChange={handleChange}
@@ -485,6 +542,7 @@ export default function MerchModal({
                   type="button"
                   className="modal-btn"
                   onClick={handleSubmit}
+                  disabled={loading}
                 >
                   Terminar mi solicitud
                 </button>
@@ -517,26 +575,30 @@ export default function MerchModal({
 
         <div className="success-overlay">
 
-          <div className="success-modal">
+         <div className="success-modal">
 
-            <h2>
-              ¡Felicidades!
-            </h2>
-
-            <p>
-              Tu solicitud ha sido enviada.
-              Se te enviará un correo de
-              confirmación con tu solicitud.
-            </p>
-
-            <button
-              className="modal-btn"
-              onClick={closeModal}
-            >
-              Cerrar
-            </button>
-
+          <div className="success-icon">
+            ✓
           </div>
+
+          <h2>
+            Solicitud enviada
+          </h2>
+
+          <p>
+            Tu solicitud fue registrada correctamente.
+            Recibirás un correo de confirmación
+            con los detalles del proceso.
+          </p>
+
+          <button
+            className="modal-btn"
+            onClick={closeModal}
+          >
+            Finalizar
+          </button>
+
+        </div>
 
         </div>
 
