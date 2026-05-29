@@ -1,27 +1,19 @@
 const events = [
   {
     id: 1,
-    title: "JUNTAS SOMOS IMPARABLES",
-    description: "Trote conmemorativo por el día de la mujer",
-    image: "https://res.cloudinary.com/ddt2qucrw/image/upload/v1779636830/MUJER_ki5ta3.jpg",
+    title: "JUNTOS PARA SIEMPRE",
+    description: "Carrera conmemorativa por el día del padre",
+    image: "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780077317/Carrera_Conmemorativa_pro_el_dia_del_padre_e2k2el.png",
     button: "Más Información",
     redirect:"/eventos",
   },
   {
     id: 2,
-    title: "SÚPER MAMÁ EN LA META",
-    description: "Trote conmemorativo por el día de la Madre",
+    title: "CAMINO A CHIGUATA",
+    description: "Carrera pedestre de Paucarpata hasta Chiguata",
     image: "https://res.cloudinary.com/ddt2qucrw/image/upload/v1779504109/3_lgz3s0.jpg",
     button: "Más Información",
     redirect:"/eventos",
-  },
-  {
-    id: 3,
-    title: "EL EQUIPO IDEAL CARRERA DE POSTAS",
-    description: "Entrenamiento especial, PRO FONDOS QUE INSPIRAN",
-    image: "https://res.cloudinary.com/ddt2qucrw/image/upload/v1779504109/2_qko1cf.jpg",
-    button: "Más Información",
-    redirect:"/eventos"
   },
 ];
 

@@ -1,4 +1,6 @@
+import Eventos from "../../pages/eventos/Eventos";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
 return (
@@ -37,10 +39,10 @@ return (
           <div className="footer-column">
 
             <h4>Navegación</h4>
-
-            <a href="/">Nosotros</a>
-            <a href="/">Eventos</a>
-            <a href="/">Indumentaria ADES</a>
+            <a><Link to="/">Inicio</Link></a>
+            <a><Link to="/nosotros">Nosotros</Link></a>
+            <a><Link to="/eventos">Eventos</Link></a>
+            <a><Link to="/indumentaria">Indumentaria</Link></a>
 
           </div>
 
