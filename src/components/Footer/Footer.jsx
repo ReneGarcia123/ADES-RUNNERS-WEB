@@ -39,10 +39,10 @@ return (
           <div className="footer-column">
 
             <h4>Navegación</h4>
-            <a><Link to="/">Inicio</Link></a>
-            <a><Link to="/nosotros">Nosotros</Link></a>
-            <a><Link to="/eventos">Eventos</Link></a>
-            <a><Link to="/indumentaria">Indumentaria</Link></a>
+            <Link to="/">Inicio</Link>
+            <Link to="/nosotros">Nosotros</Link>
+            <Link to="/eventos">Eventos</Link>
+            <Link to="/indumentaria">Indumentaria</Link>
 
           </div>
 
