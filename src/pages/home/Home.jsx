@@ -11,8 +11,6 @@ function Home() {
       <Hero />
 
       <Features/>
-
-      <EventsSection/>
        <section className="stats-section">
         {/* HEADER */}
         <div className="stats-header">

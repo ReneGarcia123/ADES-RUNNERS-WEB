@@ -4,6 +4,7 @@ import EventCard from "../../components/EventCard/EventCard";
 import eventsData from "../../components/EventCard/eventData";
 import Countdown from "../../components/CountDown/CountDown";
 
+
 function Eventos() {
   return (
     <main style={{ paddingTop: "90px", color: "white" }}>

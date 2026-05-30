@@ -1,53 +1,106 @@
 import "./Events.css";
-import events from "./Events.js";
-import {Link } from "react-router-dom";
 
-export default function EventsSection() {
+import { useState } from "react";
+
+import EventModal
+from "../EventModal/EventModal";
+
+export default function EventsSection({
+  data,
+}) {
+
+  const [isModalOpen, setIsModalOpen] =
+    useState(false);
+
+  const [selectedEvent, setSelectedEvent] =
+    useState(null);
+
+  const openModal = (event) => {
+
+    setSelectedEvent(event);
+
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+
+    setIsModalOpen(false);
+
+    setSelectedEvent(null);
+  };
+
   return (
-    <section className="events-section">
 
-      <div className="events-header">
-        <h2>Próximos eventos</h2>
-        <p>Únete a nuestras actividades y entrena con la comunidad.</p>
-      </div>
+    <>
 
-      <div className="events-grid">
+      <section className="events-section">
 
-        {events.map((event) => (
-          <div key={event.id} className="event-card">
+        <div className="events-header">
 
-            {/* IMAGE */}
-            <div className="event-image">
-              <img src={event.image} alt={event.title} />
-            </div>
+          <h2>
+            {data.title}
+          </h2>
 
-            {/* CONTENT */}
-            <div className="event-content">
+          <p>
+            {data.description}
+          </p>
 
-              <h3>{event.title}</h3>
+        </div>
 
-              <p>{event.description}</p>
+        <div className="events-grid">
 
+          {data.events.map((event) => (
 
-              <Link
-                  to={event.redirect}
+            <div
+              key={event.id}
+              className="event-card"
+            >
+
+              <div className="event-image">
+
+                <img
+                  src={event.image}
+                  alt={event.title}
+                />
+
+              </div>
+
+              <div className="event-content">
+
+                <h3>
+                  {event.title}
+                </h3>
+
+                <p>
+                  {event.description}
+                </p>
+
+                <button
                   className="event-btn"
+                  onClick={() => openModal(event)}
                 >
+
                   {event.button}
-              </Link>
-              
-              {/*
-              <button className="event-btn">
-                {event.button}
-              </button>
-                */}
+
+                </button>
+
+              </div>
+
             </div>
 
-          </div>
-        ))}
+          ))}
 
-      </div>
+        </div>
 
-    </section>
+      </section>
+
+      <EventModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        event={selectedEvent}
+      />
+
+    </>
+
   );
 }
