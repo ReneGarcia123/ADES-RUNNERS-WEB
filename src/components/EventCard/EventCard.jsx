@@ -1,4 +1,5 @@
 import "./EventCard.css";
+import { useNavigate } from "react-router-dom";
 
 export default function EventCard({
   titulo = "Próximos Eventos",
@@ -6,6 +7,7 @@ export default function EventCard({
   events = [],
 }) {
 
+  const navigate = useNavigate();
   return (
 
     <section className="events-section">
@@ -80,7 +82,10 @@ export default function EventCard({
                     ? "event-btn"
                     : "event-btn disabled"
                 }
+
                 disabled={!event.disponible}
+
+                onClick={() => navigate(event.link)}
               >
 
                 {event.disponible

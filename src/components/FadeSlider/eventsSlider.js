@@ -2,7 +2,7 @@ const homeSlides = [
 
   {
     image:
-      "https://swiperjs.com/demos/images/abstract-1.jpg",
+      "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780165329/Carrera_Conmemorativa_pro_el_dia_del_padre_Horizontal_ytdfbf.png",
 
     title: "Slide 1",
   },

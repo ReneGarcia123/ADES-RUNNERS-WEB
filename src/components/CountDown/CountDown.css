@@ -1,0 +1,151 @@
+.countdown-section {
+  width: 100%;
+
+  padding: 80px 20px 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  text-align: center;
+}
+
+.countdown-header h2 {
+  max-width: 1000px;
+
+  margin: 0 auto 18px;
+
+  text-align: center;
+
+  font-size: clamp(2.2rem, 5vw, 4.8rem);
+
+  line-height: 1.1;
+
+  font-weight: 800;
+}
+
+.countdown-header {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.countdown-header h2,
+.countdown-header p {
+  text-align: center;
+}
+
+
+.countdown-header p {
+  max-width: 760px;
+
+  color: rgba(255,255,255,0.72);
+
+  line-height: 1.7;
+
+  text-align: center;
+}
+.countdown-grid {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  flex-wrap: wrap;
+}
+.countdown-separator {
+  font-size: 3rem;
+
+  font-weight: 800;
+
+  color: #04ffca;
+
+  margin-top: -10px;
+}
+.countdown-box {
+  min-width: 120px;
+
+  padding: 30px;
+
+  background: rgba(255,255,255,0.04);
+
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 25px;
+
+  backdrop-filter: blur(12px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: all 0.3s ease;
+}
+
+.countdown-box:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(0,255,200,0.25);
+
+  box-shadow:
+    0 10px 30px rgba(0,255,200,0.08);
+}
+
+.countdown-number {
+  font-size: clamp(2rem, 5vw, 4rem);
+
+  font-weight: 800;
+
+  color: #04ffca;
+
+  line-height: 1;
+}
+
+.countdown-label {
+  margin-top: 10px;
+
+  color: rgba(255,255,255,0.7);
+
+  text-transform: uppercase;
+
+  font-size: 0.9rem;
+
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+
+ .countdown-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+  }
+
+  .countdown-days {
+    grid-column: 1 / -1;
+  }
+
+  .countdown-separator {
+    display: none;
+  }
+
+  .countdown-box {
+    min-width: auto;
+
+    width: 100%;
+  }
+
+  .countdown-number {
+    font-size: 2.3rem;
+  }
+}

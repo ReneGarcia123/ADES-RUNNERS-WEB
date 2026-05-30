@@ -3,10 +3,10 @@ const eventsData = [
   {
     id: 1,
 
-    title: "JUNTOS PARA SIEMPRE 10K",
+    title: "JUNTOS PARA SIEMPRE 13K",
 
     image:
-      "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780077317/Carrera_Conmemorativa_pro_el_dia_del_padre_e2k2el.png",
+      "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780165296/Carrera_Conmemorativa_pro_el_dia_del_padre_Collage_mhgllc.png",
 
     lugar: "Paucarpata, Arequipa",
 
@@ -16,28 +16,31 @@ const eventsData = [
 
     disponible: true,
 
+    link: "/carrera-padre",
+
     descripcion:
-      "Carrera conmemorativa por el día del Padre",
+      "Corremos Juntos, dejamos huella para Siempre, carrera conmemorativa por el día del Padre"
   },
 
   {
     id: 2,
 
-    title: "Runner Festival",
+    title: "CHIGUATA ROAD RUNN 10K",
 
     image:
-      "https://images.unsplash.com/photo-1517649763962-0c623066013b",
+      "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780155333/Copia_de_Black_Dark_Purple_Cardio_Workout_Session_Instagram_Post_1_ewrbc7.png",
 
-    lugar: "Cerro Colorado",
+    lugar: "Chiguata",
 
-    fecha: "25 Septiembre 2026",
+    fecha: "Próximamente",
 
-    costo: "S/ 60",
+    costo: "Próximamente",
 
     disponible: false,
+    link:"/carrera-padre",
 
     descripcion:
-      "Un evento pensado para todos los runners con actividades deportivas, retos, premios y una experiencia inolvidable.",
+      "Desafía tus límites y corre en esta aventura que nos lleva a Chiguata",
   },
 
 

@@ -1,0 +1,164 @@
+.event-hero {
+  width: 100%;
+}
+body {
+  overflow-x: hidden;
+}
+
+/* IMAGEN */
+
+.event-hero-image {
+  position: relative;
+
+  width: 100%;
+  height: 520px;
+
+  overflow: hidden;
+}
+
+.event-hero-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* OVERLAY */
+
+.event-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.75),
+      rgba(0,0,0,0.15)
+    );
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 40px;
+}
+
+.event-hero-overlay h1 {
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(2.2rem, 6vw, 5rem);
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  max-width: 1000px;
+
+  text-align: center;
+}
+
+/* INFO */
+.event-hero-info {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  padding: 30px 6%;
+}
+
+.event-hero-box {
+  background: rgba(255,255,255,0.04);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+  border-radius: 25px;
+
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  transition: all 0.3s ease;
+}
+
+.event-hero-box:hover {
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(0,255,204,0.25);
+
+  box-shadow:
+    0 10px 25px rgba(0,255,204,0.08);
+}
+
+.event-icon {
+  font-size: 28px;
+
+  color: #00ffcc;
+
+  margin-bottom: 14px;
+}
+
+.event-hero-box span {
+  color: rgba(255,255,255,0.65);
+
+  font-size: 14px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 8px;
+}
+
+.event-hero-box p {
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .event-hero {
+    width: 100%;
+  }
+
+  .event-hero-image {
+    height: 100%;
+  }
+
+  .event-hero-overlay {
+    padding: 25px;
+  }
+
+  .event-hero-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .event-hero-info {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+}

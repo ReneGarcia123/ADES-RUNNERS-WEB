@@ -1,7 +1,7 @@
 .events-section {
   width: 100%;
 
-  padding: 100px 6%;
+  padding: 40px 6%;
 }
 
 /* HEADER */
@@ -63,8 +63,6 @@
 /* CARD */
 
 .event-card {
-  background: #0d0d0d;
-
   border:
     1px solid
     rgba(255,255,255,0.08);
@@ -131,22 +129,25 @@
 }
 
 /* INFO */
-
 .event-info {
   display: flex;
+
   flex-direction: column;
 
-  gap: 10px;
+  gap: 4px;
 
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
+.event-card .event-info p {
+  margin: 0 !important;
 
-.event-info p {
+  padding: 0;
+
   color: rgba(255,255,255,0.75);
 
   font-size: 15px;
 
-  line-height: 1.5;
+  line-height: 1.35;
 }
 
 .event-info strong {
@@ -200,7 +201,7 @@
 @media (max-width: 768px) {
 
   .events-section {
-    padding: 70px 20px;
+    padding: 20px 20px;
   }
 
   .events-header {
