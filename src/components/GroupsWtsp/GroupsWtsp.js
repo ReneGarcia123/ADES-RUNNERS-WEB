@@ -17,11 +17,11 @@ const groups = [
   },  
   {
     id: 3,
-    title: "ADES RUNNERS EXCLUSIVO💚",
-    description: "Comunidad exclusiva de runners ADES. Grupo de Whatsapp, debes cumplir ciertos requisitos para unirte",
+    title: "GRUPO ADES RUNNERS III 🌋🌋🌋",
+    description: "Kilómetros compartidos, ahora también aquí. Grupo de Whatsapp de respaldo, abierto para todos",
     image: "https://res.cloudinary.com/ddt2qucrw/image/upload/v1779636835/ADESIII_bodlrv.png",
-    button: "Solicitar acceso",
-    redirect:"https://api.whatsapp.com/send/?phone=51944668114&text=Hola,%20quiero%20unirme%20al%20grupo%20exclusivo%20de%20ADES",
+    button: "Entrar al grupo",
+    redirect:"https://chat.whatsapp.com/IjVD4vs4jKdH0ZuGSknxuu",
   },
 ];
 

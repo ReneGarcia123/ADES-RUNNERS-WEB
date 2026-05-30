@@ -278,11 +278,11 @@ export default function EventRegisterModal({
 
       const text = await response.text();
 
-console.log(text);
+        console.log(text);
 
-setLoading(false);
+        setLoading(false);
 
-setSuccess(true);
+        setSuccess(true);
 
     } catch (error) {
 

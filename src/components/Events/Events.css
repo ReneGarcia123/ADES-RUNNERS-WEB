@@ -1,10 +1,12 @@
 .events-section {
-  padding: 40px 20px 40px 20px;
+  padding: 40px 20px;
   color: white;
   text-align: center;
-  margin-top: 0;
-}
 
+  max-width: 1400px;
+
+  width: 100%;
+}
 /* HEADER */
 .events-header h2 {
   font-size: 52px;
@@ -22,23 +24,23 @@
 
 /* GRID */
 .events-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+
+  display: flex !important;
+
+  justify-content: center !important;
+
+  align-items: center;
+
   gap: 25px;
-  max-width: 1100px;
-  margin: 0 auto;
+
+  flex-wrap: wrap;
 }
-
 /* CARD */
-.event-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 20px;
-  overflow: hidden;
-  transition: all 0.35s ease;
+.event-card {  
+  width: 320px !important;
 
-  /* shadow hacia afuera */
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  flex: 0 0 320px !important;
 }
 
 /* HOVER LIFT */
@@ -90,11 +92,4 @@
 
 .event-btn:hover {
   background: #03e6b8;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .events-grid {
-    grid-template-columns: 1fr;
-  }
 }
