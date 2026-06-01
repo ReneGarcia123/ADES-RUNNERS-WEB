@@ -11,7 +11,6 @@ function Home() {
   return (
     <main className="home-container">
       <Hero />
-
       <Features/>
       <CTAHero
         data={dataCTAHero}

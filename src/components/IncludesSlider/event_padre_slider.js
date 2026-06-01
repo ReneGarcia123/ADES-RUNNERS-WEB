@@ -5,15 +5,15 @@ const includesSliderData = {
 
   images: [
 
-    "https://atacaperu.com/wp-content/uploads/2026/05/6.avif",
+    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780346346/WhatsApp_Image_2026-06-01_at_3.25.14_PM_w2zgxo.jpg",
 
-    "https://atacaperu.com/wp-content/uploads/2026/05/5.avif",
+    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780347127/fruta_avh1p1.jpg",
 
-    "https://atacaperu.com/wp-content/uploads/2026/05/4.avif",
+    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780347236/premio_oven40.jpg",
 
-    "https://atacaperu.com/wp-content/uploads/2026/05/645392577_905971779065152_4121537732378578225_n.avif",
+    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780347237/fruta2_qwqczq.jpg",
 
-    "https://atacaperu.com/wp-content/uploads/2026/05/646365881_905078655821131_5670434078030326945_n.avif",
+    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780282868/ctahero4_fbwu1q.jpg",
   ],
 };
 
