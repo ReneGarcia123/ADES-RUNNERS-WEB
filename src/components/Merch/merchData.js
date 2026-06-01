@@ -23,13 +23,6 @@ const merchData = [
     price: "S/.40.00",
   },
 
-  {
-    id: 4,
-    title: "Gorra ADES",
-    image:
-      "https://images.unsplash.com/photo-1521369909029-2afed882baee",
-    price:"S/30.00"
-  },
 ];
 
 export default merchData;

@@ -4,6 +4,8 @@ import "./EventModal.css";
 
 import emailjs from "@emailjs/browser";
 
+
+
 const initialForm = {
   nombres: "",
   apellidos: "",
@@ -29,6 +31,11 @@ export default function EventRegisterModal({
   onClose,
   eventData,
 }) {
+  useEffect(() => {
+
+    emailjs.init("LdCqh-AJ8g67kmRHt");
+
+  }, []);
 
   const [step, setStep] = useState(1);
 
@@ -256,25 +263,36 @@ export default function EventRegisterModal({
       );
 
       // EMAILJS
-    /*
+    
       await emailjs.send(
 
-        "TU_SERVICE_ID",
+        "service_6b38k6g",
 
-        "TU_TEMPLATE_ID",
+        "template_jc9vbqm",
 
         {
           nombres: formData.nombres,
 
-          correo: formData.correo,
+          apellidos: formData.apellidos,
 
-          evento:
-            eventData?.title,
+          dni: formData.dni,
+
+          telefono: formData.telefono,
+
+          genero: formData.genero,
+
+          nacimiento: formData.nacimiento,
+
+          equipo: formData.equipo || "No especificado",
+
+          inscripcion: formData.inscripcion,
+
+          correo: formData.correo,
         },
 
-        "TU_PUBLIC_KEY"
+        "LdCqh-AJ8g67kmRHt"
       );
-    */
+    
 
       const text = await response.text();
 
@@ -668,7 +686,7 @@ export default function EventRegisterModal({
 
             <p>
               Tu inscripción fue enviada
-              correctamente.
+              correctamente. Se envío un correo de confirmación al correo que ingresaste.
             </p>
 
             <button

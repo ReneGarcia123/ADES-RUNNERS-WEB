@@ -18,8 +18,8 @@ const categoriesData = {
 
     "Varones Libre 18-34 años",
     "Damas Libre 18-34 años",
-    "Varones Máster 34-49 años",
-    "Damas Máster 34-49 años",
+    "Varones Máster 35-49 años",
+    "Damas Máster 35-49 años",
     "Varones Súper Máster 50 años a más",
     "Damas Súper Máster 50 años a más",
   ],

@@ -408,6 +408,9 @@ export default function MerchModal({
                 <option value="">
                   Talla de Prenda
                 </option>
+                <option>
+                  XS
+                </option>
 
                 <option>
                   S
@@ -430,7 +433,7 @@ export default function MerchModal({
               <input
                 type="text"
                 name="nombrePolo"
-                placeholder="Nombre para la prenda"
+                placeholder="Nombre que ira en la prenda"
                 required
                 value={formData.nombrePolo}
                 onChange={handleChange}
