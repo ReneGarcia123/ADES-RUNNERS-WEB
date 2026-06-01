@@ -1,0 +1,164 @@
+.route-map {
+  width: 100%;
+
+  padding: 40px 6% 80px;
+}
+
+/* HEADER */
+
+.route-map-header {
+  text-align: center;
+
+  margin-bottom: 35px;
+}
+
+.route-map-header span {
+  display: inline-block;
+
+  color: #04ffca;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 12px;
+}
+
+.route-map-header h2 {
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+
+  color: white;
+
+  line-height: 1;
+}
+
+/* MAP */
+
+.route-map-container {
+  position: relative;
+
+  width: 100%;
+
+  height: 620px;
+
+  border-radius: 32px;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  background:
+    rgba(255,255,255,0.03);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.28);
+}
+
+.route-map-container iframe {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+}
+
+/* DISABLED */
+
+.route-map-container.disabled img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter:
+    blur(8px)
+    brightness(0.45);
+
+  transform: scale(1.05);
+}
+
+.route-map-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 30px;
+}
+
+.route-map-badge {
+  padding: 16px 28px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(4,255,202,0.12);
+
+  border:
+    1px solid rgba(4,255,202,0.25);
+
+  backdrop-filter: blur(10px);
+
+  color: #04ffca;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 18px;
+}
+
+.route-map-overlay p {
+  max-width: 520px;
+
+  color:
+    rgba(255,255,255,0.72);
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .route-map {
+    padding: 40px 20px 60px;
+  }
+
+  .route-map-container {
+    height: 420px;
+
+    border-radius: 24px;
+  }
+
+  .route-map-badge {
+    font-size: 16px;
+
+    padding: 14px 22px;
+  }
+
+  .route-map-overlay p {
+    font-size: 15px;
+  }
+}
