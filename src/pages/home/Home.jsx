@@ -5,12 +5,17 @@ import "./Home.css";
 import CountUp from "../../components/CountUp/CountUp.jsx";
 import statsData from "../../components/CountUp/statsData.js";
 import GroupsWtsp from "../../components/GroupsWtsp/GroupsWtsp.jsx";
+import CTAHero from "../../components/CTAHero/CTAHero.jsx";
+import dataCTAHero from "../../components/CTAHero/dataCTAHero.js";
 function Home() {
   return (
     <main className="home-container">
       <Hero />
 
       <Features/>
+      <CTAHero
+        data={dataCTAHero}
+      />
        <section className="stats-section">
         {/* HEADER */}
         <div className="stats-header">
@@ -33,6 +38,7 @@ function Home() {
           ))}
         </div>
       </section>
+    
     <GroupsWtsp/>
 
     </main>
