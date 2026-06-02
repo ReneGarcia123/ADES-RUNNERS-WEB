@@ -16,7 +16,8 @@ const initialForm = {
   genero: "",
   nacimiento: "",
   equipo: "",
-
+  contactoEmergencia: "",
+  fotoDni: null,
   fotoBienvenida: null,
   voucher: null,
   inscripcion:"13K CARRERA DEL PADRE",
@@ -132,7 +133,8 @@ export default function EventRegisterModal({
 
             formData.telefono &&
             formData.genero &&
-            formData.nacimiento;
+            formData.nacimiento &&
+            formData.contactoEmergencia;
 
       if (!isValid) {
 
@@ -154,6 +156,17 @@ export default function EventRegisterModal({
 
         return;
       }
+
+      if (!formData.fotoDni) {
+
+        alert(
+          "Debes subir la foto del DNI."
+        );
+
+        return;
+      }
+
+      
     }
 
     setStep((prev) => prev + 1);
@@ -197,15 +210,13 @@ export default function EventRegisterModal({
           reader.onerror = reject;
         });
 
+      /*Convertir foto voucher*/  
       let voucherBase64 = null;
-
       if (formData.voucher) {
-
         const base64 =
           await fileToBase64(
             formData.voucher
           );
-
         voucherBase64 = {
           name: formData.voucher.name,
           type: formData.voucher.type,
@@ -213,34 +224,42 @@ export default function EventRegisterModal({
         };
       }
 
+      /*Convertir foto bienvenida*/
       let fotoBase64 = null;
-
       if (formData.fotoBienvenida) {
-
         const base64 =
           await fileToBase64(
             formData.fotoBienvenida
           );
-
         fotoBase64 = {
           name:
             formData.fotoBienvenida.name,
-
           type:
             formData.fotoBienvenida.type,
-
           base64: base64.split(",")[1],
         };
       }
 
+      /*Convertir foto DNI*/
+      let fotoDniBase64 = null;
+      if (formData.fotoDni) {
+        const base64 =
+          await fileToBase64(
+            formData.fotoDni
+          );
+        fotoDniBase64 = {
+          name: formData.fotoDni.name,
+          type: formData.fotoDni.type,
+          base64: base64.split(",")[1],
+        };
+      }
+
+
       const payload = {
-
         ...formData,
-
         voucher: voucherBase64,
-
         fotoBienvenida: fotoBase64,
-
+        fotoDni:fotoDniBase64,
         evento:
           eventData?.title || "",
       };
@@ -248,7 +267,7 @@ export default function EventRegisterModal({
       // GOOGLE APPS SCRIPT
 
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbymoaCapj66SBu-kay9FPqYLFalRXTSG_fH2xE7rl6mT06BXbGi-b3-hGcXsDXe9P9a/exec",
+        "https://script.google.com/macros/s/AKfycby3SuGDWoGollqQFXbwDrnYJ8YdDNPXjIlY3XE9MBIvpCG_rRtfd9XD4mHE0L0_wyjC/exec",
         {
             method: "POST",
 
@@ -279,13 +298,18 @@ export default function EventRegisterModal({
 
           telefono: formData.telefono,
 
+          contactoEmergencia:
+            formData.contactoEmergencia,
+
           genero: formData.genero,
 
           nacimiento: formData.nacimiento,
 
-          equipo: formData.equipo || "No especificado",
+          equipo:
+            formData.equipo || "No especificado",
 
-          inscripcion: formData.inscripcion,
+          inscripcion:
+            formData.inscripcion,
 
           correo: formData.correo,
         },
@@ -449,6 +473,13 @@ export default function EventRegisterModal({
                 value={formData.equipo}
                 onChange={handleChange}
               />
+              <input
+                type="tel"
+                name="contactoEmergencia"
+                placeholder="Contacto de emergencia"
+                value={formData.contactoEmergencia}
+                onChange={handleChange}
+              />
 
               <div className="modal-actions">
 
@@ -484,7 +515,7 @@ export default function EventRegisterModal({
 
               <label className="upload-label">
                 Foto para bienvenida
-                (opcional)
+                (OPCIONAL)
               </label>
 
               <input
@@ -503,7 +534,13 @@ export default function EventRegisterModal({
               )}
 
               <div className="payment-box">
-
+                <p>
+                  Costo de inscripción:
+                  <strong>
+                    {" "}
+                    S/.40.00
+                  </strong>
+                </p>
                 <p>
                   Yape al número:
                   <strong>
@@ -529,7 +566,7 @@ export default function EventRegisterModal({
               </div>
 
               <label className="upload-label">
-                Subir voucher de pago
+                Subir voucher de pago (OBLIGATORIO)
               </label>
 
               <input
@@ -538,6 +575,25 @@ export default function EventRegisterModal({
                 accept="image/*,.pdf"
                 onChange={handleChange}
               />
+
+              <label className="upload-label">
+                Foto del DNI del inscrito (OBLIGATORIO)
+              </label>
+
+              <input
+                type="file"
+                name="fotoDni"
+                accept="image/*,.pdf"
+                onChange={handleChange}
+              />
+
+              {formData.fotoDni && (
+
+                <p className="file-name">
+                  {formData.fotoDni.name}
+                </p>
+
+              )}
 
               {formData.voucher && (
 
