@@ -12,7 +12,7 @@ const eventsData = [
 
     fecha: "21 de junio 2026",
 
-    costo: "S/ 45",
+    costo: "S/ 25",
 
     disponible: true,
 
@@ -25,22 +25,22 @@ const eventsData = [
   {
     id: 2,
 
-    title: "CHIGUATA ROAD RUNN 10K",
+    title: "PRÓXIMO EVENTO SORPRESA",
 
     image:
       "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780155333/Copia_de_Black_Dark_Purple_Cardio_Workout_Session_Instagram_Post_1_ewrbc7.png",
 
-    lugar: "Chiguata",
+    lugar: "Próximamente",
 
     fecha: "Próximamente",
 
     costo: "Próximamente",
 
     disponible: false,
-    link:"/carrera-padre",
+    link:"/eventos",
 
     descripcion:
-      "Desafía tus límites y corre en esta aventura que nos lleva a Chiguata",
+      "El equipo ADES RUNNERS está preparando algo increíble para ti. Mantente atento a nuestras redes sociales para descubrirlo. ¡No querrás perdértelo!",
   },
 
 

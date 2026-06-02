@@ -7,20 +7,54 @@ import { Link } from "react-router-dom";
 function Hero() {
 
   const [current, setCurrent] = useState(0);
-
+/* USAR CUANDO HAYA MÁS DE UN SLIDE
   useEffect(() => {
 
-    const interval = setInterval(() => {
+    const video =
+      document.querySelectorAll(".hero-video")[current];
 
-      setCurrent((prev) =>
-        prev === slides.length - 1 ? 0 : prev + 1
-      );
+    if (!video) return;
 
-    }, 8000);
+    let timeout;
 
-    return () => clearInterval(interval);
+    const startTimer = () => {
 
-  }, []);
+      timeout = setTimeout(() => {
+
+        setCurrent((prev) =>
+          prev === slides.length - 1
+            ? 0
+            : prev + 1
+        );
+
+      }, video.duration * 1000);
+
+  };
+
+  // Si metadata ya cargó
+  if (video.readyState >= 1) {
+
+    startTimer();
+
+  } else {
+
+    video.addEventListener(
+      "loadedmetadata",
+      startTimer
+    );
+  }
+
+  return () => {
+
+    clearTimeout(timeout);
+
+    video.removeEventListener(
+      "loadedmetadata",
+      startTimer
+    );
+  };
+
+  }, [current]);*/
 
   return (
 
@@ -40,7 +74,7 @@ function Hero() {
           <video
             autoPlay
             muted
-            loop
+            loop //QUITAR LOOP CUANDO HAYA MÁS DE UN SLIDE
             playsInline
             className="hero-video"
           >
@@ -70,32 +104,28 @@ function Hero() {
 
             <div className="hero-buttons">
 
-              <div className="hero-buttons">
-                {/*BOTON PRINCIPAL ES INTERNO*/}
-                <Link
-                  to={slide.primaryLink}
-                  className="hero-btn-primary"
-                >
-                  {slide.primaryBtn}
-                </Link>
+              <Link
+                to={slide.primaryLink}
+                className="hero-btn-primary"
+              >
+                {slide.primaryBtn}
+              </Link>
 
-                {/*BOTON SECUNDARIO ES FUERA DE LA PAGINA */}
-                <a
-                  href={slide.secondaryLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hero-btn-secondary"
-                >
-                  {slide.secondaryBtn}
-                </a>
+              <a
+                href={slide.secondaryLink}
+                target="_blank"
+                rel="noreferrer"
+                className="hero-btn-secondary"
+              >
+                {slide.secondaryBtn}
+              </a>
 
-              </div>
+            </div>
 
             </div>
 
           </div>
 
-        </div>
 
       ))}
 

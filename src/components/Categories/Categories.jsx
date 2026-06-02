@@ -108,7 +108,20 @@ export default function Categories({
 
           Revisar las Bases Generales
 
-        </a>
+        </a>    
+
+      </div>
+
+      <div className="categories-cta">
+
+        <a
+          href={data.deslindeLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bases-btn"
+        >
+          Revisar el Deslinde de Responsabilidad
+        </a>    
 
       </div>
 

@@ -16,15 +16,16 @@ const categoriesData = {
 
   categories: [
 
-    "Varones Libre 18-34 años",
-    "Damas Libre 18-34 años",
-    "Varones Máster 35-49 años",
-    "Damas Máster 35-49 años",
-    "Varones Súper Máster 50 años a más",
-    "Damas Súper Máster 50 años a más",
+    "Varones Mayores: 18-34 años",
+    "Damas Mayores: 18-34 años",
+    "Varones Máster: 35-49 años",
+    "Damas Máster: 35-49 años",
+    "Varones Súper Máster: 50 años a más",
+    "Damas Súper Máster: 50 años a más",
   ],
 
-  basesLink:"https://atacaperu.com/wp-content/uploads/2025/12/BASES-AQP-TRAIL-2026.pdf",
+  basesLink:"https://drive.google.com/file/d/1HSXnJWU2NYntMUGE_QoYAZsKne6Q1yex/view?usp=sharing",
+  deslindeLink:"https://drive.google.com/file/d/17Q7_OW-z2BvTpMw7JfIVGFeKymWno5Ni/view?usp=sharing",
 
   items: [
 
@@ -52,7 +53,7 @@ const categoriesData = {
       title: "Kit Oficial ADES",
 
       text:
-        "Polo, dorsal y medalla finisher (para los inscritos)",
+        "Dorsal y medalla finisher (para los inscritos)",
     },
 
   ],

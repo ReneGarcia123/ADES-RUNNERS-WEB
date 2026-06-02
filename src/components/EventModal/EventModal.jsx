@@ -474,7 +474,7 @@ export default function EventRegisterModal({
                 onChange={handleChange}
               />
               <input
-                type="tel"
+                type="text"
                 name="contactoEmergencia"
                 placeholder="Contacto de emergencia"
                 value={formData.contactoEmergencia}
@@ -538,7 +538,7 @@ export default function EventRegisterModal({
                   Costo de inscripción:
                   <strong>
                     {" "}
-                    S/.40.00
+                    S/.25.00
                   </strong>
                 </p>
                 <p>
