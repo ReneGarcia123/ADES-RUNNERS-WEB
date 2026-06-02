@@ -1,0 +1,61 @@
+.checkbox-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  padding: 18px;
+
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.04);
+
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 18px !important;
+  min-width: 18px !important;
+  max-width: 18px !important;
+
+  height: 18px !important;
+
+  margin-top: 3px;
+
+  flex: none;
+
+  accent-color: #00ffcc;
+}
+
+.checkbox-item span {
+  color: white;
+
+  line-height: 1.5;
+}
+
+.modal-container {
+  max-height: 90vh;
+
+  overflow-y: visible;
+
+  overflow-x: visible;
+}
+
+.modal-actions button {
+  min-width: 0;
+}
+
+@media (max-width: 480px) {
+
+  .modal-container {
+    padding-bottom: 120px;
+    overflow-y: auto;
+    overflow-x: visible;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+}

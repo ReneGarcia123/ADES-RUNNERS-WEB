@@ -525,14 +525,6 @@ export default function EventRegisterModal({
                 onChange={handleChange}
               />
 
-              {formData.fotoBienvenida && (
-
-                <p className="file-name">
-                  {formData.fotoBienvenida.name}
-                </p>
-
-              )}
-
               <div className="payment-box">
                 <p>
                   Costo de inscripción:
@@ -556,13 +548,6 @@ export default function EventRegisterModal({
                     Rocio Cuentas
                   </strong>
                 </p>
-
-                <p>
-                  En la descripción del
-                  Yape indicar nombres y
-                  apellidos.
-                </p>
-
               </div>
 
               <label className="upload-label">
@@ -586,22 +571,6 @@ export default function EventRegisterModal({
                 accept="image/*,.pdf"
                 onChange={handleChange}
               />
-
-              {formData.fotoDni && (
-
-                <p className="file-name">
-                  {formData.fotoDni.name}
-                </p>
-
-              )}
-
-              {formData.voucher && (
-
-                <p className="file-name">
-                  {formData.voucher.name}
-                </p>
-
-              )}
 
               <div className="modal-actions">
 
