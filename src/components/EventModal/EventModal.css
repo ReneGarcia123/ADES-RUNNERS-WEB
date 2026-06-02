@@ -1,4 +1,11 @@
-.event-modal-overlay {
+* {
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+
+.modal-overlay {
   position: fixed;
 
   inset: 0;
@@ -11,93 +18,21 @@
 
   z-index: 9999;
 
-  padding: 20px;
+  padding: 16px;
+
+  overflow-y: auto;
 }
-
-.event-modal {
-  width: 100%;
-  max-width: 500px;
-
-  background: #111;
-
-  padding: 40px 30px;
-
-  position: relative;
-
-  border:
-    1px solid
-    rgba(255,255,255,0.08);
-}
-
-.event-modal-close {
-  position: absolute;
-
-  top: 12px;
-  right: 14px;
-
-  background: none;
-  border: none;
-
-  color: white;
-
-  font-size: 28px;
-
-  cursor: pointer;
-}
-
-.event-modal h2 {
-  color: white;
-
-  margin-bottom: 10px;
-}
-
-.event-modal-description {
-  color: rgba(255,255,255,0.7);
-
-  margin-bottom: 30px;
-}
-
-.event-form {
-  display: flex;
-  flex-direction: column;
-
-  gap: 16px;
-}
-
-.event-form input {
+input[type="file"] {
   width: 100%;
 
-  height: 54px;
-
-  background: rgba(255,255,255,0.05);
-
-  border:
-    1px solid
-    rgba(255,255,255,0.08);
-
-  padding: 0 16px;
-
   color: white;
 
-  outline: none;
-  border-radius: 25px;
+  font-size: 14px;
+
+  overflow: hidden;
 }
 
-.event-form button {
-  height: 54px;
 
-  border: none;
-
-  background: #00ffcc;
-
-  color: black;
-
-  font-weight: 700;
-
-  cursor: pointer;
-
-  margin-top: 10px;
-}
 .modal-progress {
   display: flex;
   gap: 10px;
@@ -190,4 +125,218 @@
   line-height: 1.6;
 
   font-size: 15px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.modal-container {
+  width: 100%;
+  max-width: 500px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background: #111;
+
+  padding: 28px 20px;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  position: relative;
+  padding-top: 60px;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+/* STEP */
+.modal-step {
+  min-width: 0;
+}
+
+/* INPUT FILE */
+.modal-step input[type="file"] {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* NOMBRE DE ARCHIVOS */
+.file-name {
+  width: 100%;
+
+  word-break: break-word;
+
+  overflow-wrap: break-word;
+
+  font-size: 14px;
+}
+
+/* BOX DE PAGO */
+.payment-box {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  overflow-wrap: break-word;
+}
+
+/* BOTONES */
+.modal-actions {
+  display: flex;
+
+  gap: 12px;
+
+  width: 100%;
+
+  flex-wrap: wrap;
+}
+
+.modal-actions button {
+  flex: 1;
+  min-width: 120px;
+}
+
+/* INPUTS GENERALES */
+.modal-step input,
+.modal-step select,
+.modal-step button {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* SELECT */
+.modal-step select {
+  height: 54px;
+
+  background: rgba(255,255,255,0.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  padding: 0 16px;
+
+  color: white;
+
+  outline: none;
+
+  border-radius: 25px;
+}
+
+/* BOTONES */
+.modal-btn,
+.modal-btn-secondary {
+  height: 54px;
+
+  border: none;
+
+  border-radius: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.modal-btn {
+  background: #00ffcc;
+  color: black;
+}
+
+.modal-btn-secondary {
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+/* CERRAR MODAL */
+.modal-close {
+  position: sticky;
+
+  top: 0;
+  right: 14px;
+
+  background: none;
+  border: none;
+
+  color: white;
+
+  font-size: 28px;
+
+  cursor: pointer;
+
+  z-index: 2;
+  margin-left: auto;
+  display: block;
+}
+
+/* TITULOS */
+.modal-step h2 {
+  color: white;
+
+  margin-bottom: 20px;
+}
+
+/* INPUTS */
+.modal-step input {
+  height: 54px;
+
+  background: rgba(255,255,255,0.05);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  padding: 0 16px;
+
+  color: white;
+
+  outline: none;
+
+  border-radius: 25px;
+}
+
+/* ESPACIADO ENTRE ELEMENTOS */
+.modal-step {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  max-width: 100%;
+}
+
+/* SCROLL BONITO */
+.modal-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-container::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+
+  border-radius: 999px;
+}
+
+/* SAFARI FIX */
+.modal-overlay {
+  overscroll-behavior: contain;
+}
+
+@media (max-width: 480px) {
+
+  .modal-container {
+    padding: 20px 16px;
+  }
+
+  .modal-btn,
+  .modal-btn-secondary {
+    width: 100%;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
 }
