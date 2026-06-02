@@ -39,7 +39,7 @@ const sponsorsData = {
         "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780423170/5_afjcvs.png",
 
       link:
-        "https://web.facebook.com/LautrecCafe",
+        "https://www.instagram.com/lautreccafe?igsh=Z2YwYXhzYTE0NG4y",
     },
 
     {
@@ -63,13 +63,23 @@ const sponsorsData = {
     },
 
     {
-      name: "JOSEAM FOTO SPORT",
+      name: "LICENCIADA NORDY",
 
       image:
         "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780423190/5_kprplc.jpg",
 
       link:
         "https://wa.me/+51960365825",
+    },
+
+    {
+      name: "UNA MONTAÑA PARA TODOS",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780423170/1_dh83qq.png",
+
+      link:
+        "https://web.facebook.com/profile.php?id=61573263676191",
     },
   ],
 };
