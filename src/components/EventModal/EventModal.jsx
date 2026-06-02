@@ -350,7 +350,7 @@ export default function EventRegisterModal({
             className="modal-close"
             onClick={closeModal}
           >
-            ×
+            X
           </button>
 
           {/* PROGRESS */}
