@@ -81,6 +81,16 @@ const sponsorsData = {
       link:
         "https://web.facebook.com/profile.php?id=61573263676191",
     },
+
+    {
+      name: "RUNAWAY COLON",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780493071/9_vojkco.png",
+
+      link:
+        "https://www.instagram.com/runawaycolor.pe?utm_source=qr",
+    },
   ],
 };
 
