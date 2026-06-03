@@ -91,6 +91,16 @@ const sponsorsData = {
       link:
         "https://www.instagram.com/runawaycolor.pe?utm_source=qr",
     },
+
+    {
+      name: "ANGELES TAXI",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780510844/10_zybnok.png",
+
+      link:
+        "https://www.tiktok.com/@angels_delsur?lang=es-419",
+    },
   ],
 };
 
