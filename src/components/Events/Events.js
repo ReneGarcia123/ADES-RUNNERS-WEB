@@ -3,7 +3,7 @@ const eventsData = {
   title: "INSCRIPCIONES",
 
   description:
-    "Inscribite ahora, inscripciones hasta el 20/06/26 o hasta agotar inscripciones",
+    "Inscríbete ahora, inscripciones hasta el 20/06/26 o hasta agotar inscripciones",
 
   events: [
 

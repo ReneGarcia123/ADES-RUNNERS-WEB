@@ -31,7 +31,7 @@ function CarreraPadre(){
 
         <Countdown
             title="CUENTA REGRESIVA PARA EL EVENTO"
-            subtitle="CORREMOS JUNTOS DEJAMOS HELLA PARA SIEMPRE. La cuenta regresiva ya comenzó. Carrera conmemorativa por el día del padre"
+            subtitle="CORREMOS JUNTOS DEJAMOS HUELLA PARA SIEMPRE. La cuenta regresiva ya comenzó. Carrera conmemorativa por el día del padre"
             targetDate="2026-06-21T06:00:00"
        />
 
