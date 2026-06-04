@@ -101,6 +101,16 @@ const sponsorsData = {
       link:
         "https://www.tiktok.com/@angels_delsur?lang=es-419",
     },
+
+    {
+      name: "RUNNING ELECTRIC",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780532443/11_zq08ne.png",
+
+      link:
+        "https://www.instagram.com/running.aqp?igsh=MTE1dGoyeXM2ZGx1cQ==",
+    },
   ],
 };
 
