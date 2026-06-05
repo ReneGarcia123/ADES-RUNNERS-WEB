@@ -111,6 +111,36 @@ const sponsorsData = {
       link:
         "https://www.instagram.com/running.aqp?igsh=MTE1dGoyeXM2ZGx1cQ==",
     },
+    
+    {
+      name: "NATH DETALLES",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780624790/13_qhannp.png",
+
+      link:
+        "https://www.tiktok.com/@detalles.by.nath",
+    },
+
+    {
+      name: "ORIHUELA FITNESS CLUB",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780624787/12_t8wfgk.png",
+
+      link:
+        "https://www.tiktok.com/@angelaorihuelarojas/video/7647049734263147783?_r=1&_t=ZS-96uW3BO39D3",
+    },
+
+    {
+      name: "SALUDABLE",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780624786/14_seys0i.png",
+
+      link:
+        "https://wa.me/+51993382986",
+    },
   ],
 };
 
