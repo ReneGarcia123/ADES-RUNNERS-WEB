@@ -141,6 +141,16 @@ const sponsorsData = {
       link:
         "https://wa.me/+51993382986",
     },
+
+    {
+      name: "FUXION INDEPENDIENTE",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1781310722/WhatsApp_Image_2026-06-12_at_7.37.10_AM_r1zvl5.jpg",
+
+      link:
+        "https://www.tiktok.com/@claudiafit?_r=1&_t=ZS-979r3NUOg7u",
+    },
   ],
 };
 
