@@ -151,6 +151,16 @@ const sponsorsData = {
       link:
         "https://www.tiktok.com/@claudiafit?_r=1&_t=ZS-979r3NUOg7u",
     },
+
+    {
+      name: "TIMON EVENTOS",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1781482101/1749446919_Diseosinttulo1_gzq3us.png",
+
+      link:
+        "https://timon.pe/",
+    },
   ],
 };
 
