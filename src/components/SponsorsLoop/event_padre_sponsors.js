@@ -171,6 +171,36 @@ const sponsorsData = {
       link:
         "https://wa.me/+51972779298",
     },
+
+    {
+      name: "JUAN TORRE BLANCA TAXI",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1781750802/1B_akivty.jpg",
+
+      link:
+        "https://wa.me/+51922366262",
+    },
+
+    {
+      name: "GLEN ALVARES NUNES TAXI",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1781750802/1C_t4gqwt.jpg",
+
+      link:
+        "https://wa.me/+51906238986",
+    },
+    
+    {
+      name: "JIMMY ALVARES  TAXI",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1781750802/1A_dmrrw8.jpg",
+
+      link:
+        "https://wa.me/+51983644619",
+    },
   ],
 };
 
