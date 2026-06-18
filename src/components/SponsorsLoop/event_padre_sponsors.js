@@ -161,6 +161,16 @@ const sponsorsData = {
       link:
         "https://timon.pe/",
     },
+
+    {
+      name: "AZZORTI",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1781653059/WhatsApp_Image_2026-06-16_at_8.13.24_AM_irfzhn.jpg",
+
+      link:
+        "https://wa.me/+51972779298",
+    },
   ],
 };
 

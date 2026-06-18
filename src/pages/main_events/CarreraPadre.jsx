@@ -8,6 +8,7 @@ import Categories from '../../components/Categories/Categories.jsx';
 import event_padre_categories from "../../components/Categories/event_padre_categories.jsx"
 import RouteMap from '../../components/RouteMap/RouteMap.jsx';
 import event_padre_map from "../../components/RouteMap/event_padre_map.js"
+
 import IncludesSlider from '../../components/IncludesSlider/IncludesSlider.jsx';
 import event_padre_slider from '../../components/IncludesSlider/event_padre_slider.js';
 import SponsorsLoop from '../../components/SponsorsLoop/SponsorsLoop.jsx';
@@ -34,11 +35,13 @@ function CarreraPadre(){
             subtitle="CORREMOS JUNTOS DEJAMOS HUELLA PARA SIEMPRE. La cuenta regresiva ya comenzó. Carrera conmemorativa por el día del padre"
             targetDate="2026-06-21T06:00:00"
        />
-
+    
+       {/*} 
        <EventsSection
           data={eventsData}
        />
-
+       */}
+       
        <Categories
             data={event_padre_categories}
        />
