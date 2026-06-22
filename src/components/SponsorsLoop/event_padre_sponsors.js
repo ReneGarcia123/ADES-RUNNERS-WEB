@@ -42,15 +42,6 @@ const sponsorsData = {
         "https://www.instagram.com/lautreccafe?igsh=Z2YwYXhzYTE0NG4y",
     },
 
-    {
-      name: "ADES AVENTUREROS DEL SUR",
-
-      image:
-        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780423171/8_u6btyb.png",
-
-      link:
-        "https://web.facebook.com/profile.php?id=61562745433804",
-    },
 
     {
       name: "JOSEMA FOTO SPORT",
@@ -163,16 +154,6 @@ const sponsorsData = {
     },
 
     {
-      name: "AZZORTI",
-
-      image:
-        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1781653059/WhatsApp_Image_2026-06-16_at_8.13.24_AM_irfzhn.jpg",
-
-      link:
-        "https://wa.me/+51972779298",
-    },
-
-    {
       name: "JUAN TORRE BLANCA TAXI",
 
       image:
@@ -201,6 +182,37 @@ const sponsorsData = {
       link:
         "https://wa.me/+51983644619",
     },
+
+    {
+      name: "MASTERMAQ",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1782096942/15_zca7cr.png",
+
+      link:
+        "https://www.facebook.com/profile.php?id=100057090114553&locale=gl_ES#",
+    },
+
+    {
+      name: "POWER RUN",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1782096941/17_fzeifo.png",
+
+      link:
+        "https://www.powerun.pe/?fbclid=IwY2xjawSlhHpleHRuA2FlbQIxMABicmlkETEwakd3ZU1pTVlFRFRpVXBlc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHjtKfkvWaIpRz08Ewt4HDllCqRzqFXGUD9L0lCAA5O3VP1Y7LmXu35HhbGqE_aem_5Kdy9djMcnmB1VDDdWrF6g",
+    },
+    
+    {
+      name: "FULL HEAVY WORKOUT",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1782096942/16_orbaqk.png",
+
+      link:
+        "https://adesrunnersdelsur.com/carrera-padre",
+    },
+
   ],
 };
 
