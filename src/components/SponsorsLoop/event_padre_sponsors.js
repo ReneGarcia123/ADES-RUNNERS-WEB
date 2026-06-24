@@ -210,7 +210,7 @@ const sponsorsData = {
         "https://res.cloudinary.com/ddt2qucrw/image/upload/v1782096942/16_orbaqk.png",
 
       link:
-        "https://adesrunnersdelsur.com/carrera-padre",
+        "https://www.instagram.com/brayan.pachecoc?igsh=ZXQ1dWUydHJyeng4&utm_source=qr",
     },
 
   ],
