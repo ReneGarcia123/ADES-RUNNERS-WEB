@@ -12,8 +12,8 @@ const championsData = {
 
       winners: [
         "Luís Fernando",
-        "NO CONOCIDO",
-        "NO CONOCIDO",
+        " ",
+        "Jean Carlos",
       ]
     },
 
@@ -26,8 +26,8 @@ const championsData = {
 
       winners: [
         "Mérida Salas Mongue",
-        "NO CONOCIDO",
-        "NO CONOCIDO",
+        " ",
+        " ",
       ]
     },
 
@@ -39,7 +39,7 @@ const championsData = {
       image: "https://res.cloudinary.com/ddt2qucrw/image/upload/v1783967489/VARONES_S_MASTER_uz7ksn.jpg",
 
       winners: [
-        "NO CONOCIDO",
+        " ",
         "Aldo Peña Altamirano",
         "Celso Llamoca",
       ]
@@ -53,9 +53,9 @@ const championsData = {
       image: "https://res.cloudinary.com/ddt2qucrw/image/upload/v1783967489/VARONES_MASTER_suiyi3.jpg",
 
       winners: [
-        "Elías",
+        "Elías Ortega Ponce",
         "Glinio Medina Barrientos",
-        "NO CONOCIDO",
+        " ",
       ]
     },
 

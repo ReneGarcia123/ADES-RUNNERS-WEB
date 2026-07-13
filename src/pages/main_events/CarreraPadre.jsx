@@ -17,6 +17,9 @@ import event_padre_sponsors from '../../components/SponsorsLoop/event_padre_spon
 import ChampionsSlider from '../../components/ChampionsSlider/ChampionsSlider.jsx';
 import championsData from '../../components/ChampionsSlider/championsData.js';  
 
+import VideoEvent from '../../components/VideoEvent/VideoEvent.jsx';
+import videoDataEventPadre from '../../components/VideoEvent/videoDataEventPadre.js';
+
 function CarreraPadre(){
     return(
     <main 
@@ -37,6 +40,14 @@ function CarreraPadre(){
             data={championsData}
         />
 
+        <VideoEvent
+            data={videoDataEventPadre}
+        />
+
+       <IncludesSlider
+            data={event_padre_slider}
+        />
+        
         {/* Habilitar para inscripciones
         <Countdown
             title="CUENTA REGRESIVA PARA EL EVENTO"
@@ -53,12 +64,6 @@ function CarreraPadre(){
        <Categories
             data={event_padre_categories}
        />
-
-       <IncludesSlider
-            data={event_padre_slider}
-        />
-
-
 
        <RouteMap
             data={event_padre_map}

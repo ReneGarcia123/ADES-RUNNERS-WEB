@@ -1,0 +1,185 @@
+.video-event{
+
+    width:100%;
+
+    padding:40px 8%;
+}
+
+.video-header{
+
+    text-align:center;
+
+    max-width:800px;
+
+    margin:auto auto 60px;
+}
+
+.video-header span{
+
+    color:#04ffca;
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+}
+
+.video-header h2{
+
+    color:white;
+
+    margin:18px 0;
+
+    font-size:clamp(2rem,4vw,3.2rem);
+
+    font-weight:800;
+}
+
+.video-header p{
+
+    color:#bdbdbd;
+
+    line-height:1.8;
+}
+
+.video-wrapper{
+
+    width:100%;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    aspect-ratio:16/9;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    background:#111;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+}
+
+.youtube-video{
+
+    aspect-ratio:16/9;
+}
+
+.facebook-video{
+
+    aspect-ratio:9/16;
+
+    max-width:500px;
+
+    margin:auto;
+}
+.video-cover{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.55)
+    ),
+
+    url("https://res.cloudinary.com/ddt2qucrw/image/upload/v1780077317/Carrera_Conmemorativa_pro_el_dia_del_padre_e2k2el.png")
+    center/cover;
+}
+
+.video-cover:hover{
+
+    transform:scale(1.02);
+}
+
+.play-button{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:#04ffca;
+
+    color:#111;
+
+    font-size:38px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+    transition:.3s;
+}
+
+.video-cover:hover .play-button{
+
+    transform:scale(1.1);
+}
+
+.video-cover h3{
+
+    color:white;
+
+    font-size:1.5rem;
+
+    font-weight:700;
+}
+
+.video-wrapper iframe{
+
+    width:100%;
+
+    height:100%;
+
+    border:none;
+}
+
+@media(max-width:768px){
+
+    .video-event{
+
+        padding:70px 20px;
+    }
+
+    .play-button{
+
+        width:70px;
+
+        height:70px;
+
+        font-size:28px;
+    }
+
+    .video-cover h3{
+
+        font-size:1.15rem;
+    }
+
+}

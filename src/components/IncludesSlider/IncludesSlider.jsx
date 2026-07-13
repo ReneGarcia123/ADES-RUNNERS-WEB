@@ -24,7 +24,7 @@ export default function IncludesSlider({
       <div className="includes-header">
 
         <span>
-          BENEFICIOS DEL EVENTO
+          LAS MEJORES FOTOS
         </span>
 
         <h2>

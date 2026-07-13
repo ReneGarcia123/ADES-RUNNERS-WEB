@@ -1,19 +1,25 @@
 const includesSliderData = {
 
   title:
-    "¿Qué incluye tu participación?",
+    "LO QUE FUE NUESTRO EVENTO",
 
   images: [
 
-    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780346346/WhatsApp_Image_2026-06-01_at_3.25.14_PM_w2zgxo.jpg",
+    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1783968931/padre_1_edptit.jpg",
 
-    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780347127/fruta_avh1p1.jpg",
+    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1783968931/padre_4_icidy8.jpg",
 
-    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780347236/premio_oven40.jpg",
+    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1783968932/padre_7_sjytuz.jpg",
 
-    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780347237/fruta2_qwqczq.jpg",
+    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1783968933/padre_3_fek5cm.jpg",
 
-    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780282868/ctahero4_fbwu1q.jpg",
+    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1783968932/padre_5_avvpj4.jpg",
+
+    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1783968933/padre_8_bbhcyf.jpg",
+
+    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1783968934/padre_6_jacczs.jpg",
+
+    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1783968935/padre_2_y0lbjq.jpg",
   ],
 };
 
