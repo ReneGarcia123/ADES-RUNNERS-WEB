@@ -48,7 +48,7 @@ const championsData = {
     {
       id: 4,
 
-      categoria: "Varones Súper Máster",
+      categoria: "Varones Máster",
 
       image: "https://res.cloudinary.com/ddt2qucrw/image/upload/v1783967489/VARONES_MASTER_suiyi3.jpg",
 
