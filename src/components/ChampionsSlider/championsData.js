@@ -12,7 +12,7 @@ const championsData = {
 
       winners: [
         "Luís Fernando",
-        " ",
+        "Jordy Cayra",
         "Jean Carlos",
       ]
     },
@@ -25,9 +25,9 @@ const championsData = {
       image: "https://res.cloudinary.com/ddt2qucrw/image/upload/v1783967489/DAMAS_LIBRE_kzosrd.jpg",
 
       winners: [
-        "Mérida Salas Mongue",
+        "Mérida Salas",
         " ",
-        " ",
+        "Karina Chura",
       ]
     },
 
@@ -39,8 +39,8 @@ const championsData = {
       image: "https://res.cloudinary.com/ddt2qucrw/image/upload/v1783967489/VARONES_S_MASTER_uz7ksn.jpg",
 
       winners: [
-        " ",
-        "Aldo Peña Altamirano",
+        "Luis Yana",
+        "Aldo Peña",
         "Celso Llamoca",
       ]
     },
@@ -53,9 +53,9 @@ const championsData = {
       image: "https://res.cloudinary.com/ddt2qucrw/image/upload/v1783967489/VARONES_MASTER_suiyi3.jpg",
 
       winners: [
-        "Elías Ortega Ponce",
-        "Glinio Medina Barrientos",
-        " ",
+        "Elías Ortega",
+        "Glinio Medina",
+        "Juan Carlos Asillo",
       ]
     },
 
