@@ -55,7 +55,7 @@ const championsData = {
       winners: [
         "Elías Ortega",
         "Glinio Medina",
-        "Juan Carlos Asillo",
+        "Juan Carlos Sillo",
       ]
     },
 
