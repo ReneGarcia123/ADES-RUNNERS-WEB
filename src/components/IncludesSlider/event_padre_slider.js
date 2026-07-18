@@ -1,5 +1,6 @@
 const includesSliderData = {
 
+  pretitle:"LAS MEJORES FOTOS",
   title:
     "LO QUE FUE NUESTRO EVENTO",
 

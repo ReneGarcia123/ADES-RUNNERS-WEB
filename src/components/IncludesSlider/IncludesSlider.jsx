@@ -24,7 +24,7 @@ export default function IncludesSlider({
       <div className="includes-header">
 
         <span>
-          LAS MEJORES FOTOS
+          {data.pretitle}
         </span>
 
         <h2>

@@ -1,7 +1,8 @@
 const includesSliderData = {
 
+  pretitle:"ACTIVIDADES A REALIZARSE",
   title:
-    "LO QUE FUE NUESTRO EVENTO",
+    "¡PARTICIPA YA!",
 
   images: [
 
