@@ -26,7 +26,7 @@ const event_aniversario_categories = {
     "Y muchas sorpresas más",
   ],
   nameBases:"Ver punto de encuentro",
-  basesLink:"https://drive.google.com/file/d/1HSXnJWU2NYntMUGE_QoYAZsKne6Q1yex/view?usp=sharing",
+  basesLink:"https://maps.app.goo.gl/isVrHxG2UFRNLcDt7",
   nameDeslinde:"Revisar Programa de Actividades",
   deslindeLink:"https://drive.google.com/file/d/17Q7_OW-z2BvTpMw7JfIVGFeKymWno5Ni/view?usp=sharing",
 
