@@ -13,7 +13,7 @@ export default function Categories({
       <div className="categories-top-title">
 
         <h2>
-          SOBRE LA COMPETENCIA
+          {data.title}
         </h2>
 
       </div>
@@ -34,7 +34,7 @@ export default function Categories({
           <div className="categories-overlay-content">
 
             <h2>
-              Categorías Oficiales
+              {data.description}
             </h2>
 
             {/* CATEGORIES */}
@@ -106,7 +106,7 @@ export default function Categories({
           className="bases-btn"
         >
 
-          Revisar las Bases Generales
+          {data.nameBases}
 
         </a>    
 
@@ -120,7 +120,7 @@ export default function Categories({
           rel="noopener noreferrer"
           className="bases-btn"
         >
-          Revisar el Deslinde de Responsabilidad
+          {data.nameDeslinde}
         </a>    
 
       </div>

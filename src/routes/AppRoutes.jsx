@@ -5,6 +5,7 @@ import Eventos from '../pages/eventos/Eventos.jsx'
 import Nosotros from '../pages/nosotros/Nosotros.jsx'
 import Indumentaria from '../pages/indumentaria_ades/Indumentaria.jsx'
 import CarreraPadre from "../pages/main_events/CarreraPadre";
+import AniversarioAdes from "../pages/main_events/AniversarioAdes.jsx";
 
 export const AppRoutes = () => {
   return (
@@ -14,6 +15,7 @@ export const AppRoutes = () => {
       <Route path="/nosotros" element={<Nosotros />} />
       <Route path="/indumentaria" element={<Indumentaria />} />
       <Route path="/carrera-padre" element={<CarreraPadre/>}/>
+      <Route path="/aniversario-ades" element={<AniversarioAdes/>}/>
     </Routes>
   );
 }

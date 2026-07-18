@@ -24,7 +24,9 @@ const categoriesData = {
     "Damas Súper Máster: 50 años a más",
   ],
 
+  nameBases:"Revisar las Bases Generales",
   basesLink:"https://drive.google.com/file/d/1HSXnJWU2NYntMUGE_QoYAZsKne6Q1yex/view?usp=sharing",
+  nameDeslinde:"Revisar el Deslinde de Responsabilidad",
   deslindeLink:"https://drive.google.com/file/d/17Q7_OW-z2BvTpMw7JfIVGFeKymWno5Ni/view?usp=sharing",
 
   items: [
