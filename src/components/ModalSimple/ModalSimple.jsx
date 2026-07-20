@@ -101,8 +101,8 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
 
   const handleSubmit = async () => {
     // Protección extra de backend simulada en el front
-    if (totalInscritos >= 100) {
-      alert("Lo sentimos, se han agotado los 100 cupos disponibles.");
+    if (totalInscritos >= 3) {
+      alert("Lo sentimos, se han agotado los 3 cupos disponibles.");
       return;
     }
 
