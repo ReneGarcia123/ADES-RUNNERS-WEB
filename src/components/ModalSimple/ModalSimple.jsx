@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import "./ModalSimple.css";
 import emailjs from "@emailjs/browser";
 
+// 🎯 CONFIGURACIÓN CENTRALIZADA: Modifica este número y cambiará en toda tu app
+const LIMITE_CUPOS = 3; 
+
 const initialForm = {
   nombres: "",
   apellidos: "",
@@ -30,7 +33,6 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
 
     const obtenerContador = async () => {
       try {
-        // Apuntamos directo a tu tabla seleccionando solo la columna 'id' para que sea rápido
         const SUPABASE_URL = "https://sypqitqrmmkcjpwrkrpg.supabase.co/rest/v1/inscritos_aniversario_ades?select=id";
         const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5cHFpdHFybW1rY2pwd3JrcnBnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ1NjY3NzcsImV4cCI6MjEwMDE0Mjc3N30.GnyPIaOZUFoefVeDqIQBt5VTY9xpbVtL9rM58Oyc49s";
 
@@ -44,7 +46,6 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
 
         if (response.ok) {
           const data = await response.json();
-          // data será un array de objetos: [{id: 2}, {id: 3}]. Su longitud es el total de filas.
           setTotalInscritos(data.length || 0);
         }
       } catch (error) {
@@ -100,9 +101,9 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
   };
 
   const handleSubmit = async () => {
-    // Protección extra de backend simulada en el front
-    if (totalInscritos >= 3) {
-      alert("Lo sentimos, se han agotado los 3 cupos disponibles.");
+    // 🔒 Validación basada en la variable centralizada
+    if (totalInscritos >= LIMITE_CUPOS) {
+      alert(`Lo sentimos, se han agotado los ${LIMITE_CUPOS} cupos disponibles.`);
       return;
     }
 
@@ -129,7 +130,6 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
       const SUPABASE_URL = "https://sypqitqrmmkcjpwrkrpg.supabase.co/rest/v1/inscritos_aniversario_ades";
       const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5cHFpdHFybW1rY2pwd3JrcnBnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ1NjY3NzcsImV4cCI6MjEwMDE0Mjc3N30.GnyPIaOZUFoefVeDqIQBt5VTY9xpbVtL9rM58Oyc49s";
 
-      // 1. Envío a Supabase
       const response = await fetch(SUPABASE_URL, {
         method: "POST",
         headers: {
@@ -145,8 +145,7 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
         throw new Error("Error al insertar los datos en Supabase");
       }
 
-      {/*}
-      // 2. Envío de Correo vía EmailJS al correo del usuario
+      // 📧 2. Envío de Correo vía EmailJS (Solo los 6 campos solicitados)
       await emailjs.send(
         "service_6b38k6g",
         "template_jc9vbqm",
@@ -156,12 +155,10 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
           dni: formData.dni,
           telefono: formData.telefono,
           talla: formData.talla,
-          sugerencia: formData.sugerencia || "Ninguna",
           correo: formData.correo, 
-          evento: payload.evento,
         },
         "LdCqh-AJ8g67kmRHt"
-      );*/}
+      );
 
       setLoading(false);
       setSuccess(true);
@@ -171,6 +168,9 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
       setLoading(false);
     }
   };
+
+  // ¿Están los cupos llenos?
+  const cuposAgotados = totalInscritos >= LIMITE_CUPOS;
 
   return (
     <>
@@ -191,12 +191,12 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
             <div className="modal-step">
               <h2>Datos Personales</h2>
 
-              {/* Contador de Cupos */}
+              {/* Contador de Cupos Dinámico */}
               <div className="cupos-contador" style={{ marginBottom: "15px", color: "#00ffcc", fontSize: "14px", textAlign: "left" }}>
-                {totalInscritos >= 3 ? (
-                  <span style={{ color: "#ff4444", fontWeight: "bold" }}>⚠️ Cupos agotados (100/100)</span>
+                {cuposAgotados ? (
+                  <span style={{ color: "#ff4444", fontWeight: "bold" }}>⚠️ Cupos agotados ({LIMITE_CUPOS}/{LIMITE_CUPOS})</span>
                 ) : (
-                  <span>Cupos registrados: <strong>{totalInscritos} / 3</strong></span>
+                  <span>Cupos registrados: <strong>{totalInscritos} / {LIMITE_CUPOS}</strong></span>
                 )}
               </div>
 
@@ -206,7 +206,7 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
                 placeholder="Nombres"
                 value={formData.nombres}
                 onChange={handleChange}
-                disabled={totalInscritos >= 100}
+                disabled={cuposAgotados}
               />
               <input
                 type="text"
@@ -214,7 +214,7 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
                 placeholder="Apellidos"
                 value={formData.apellidos}
                 onChange={handleChange}
-                disabled={totalInscritos >= 100}
+                disabled={cuposAgotados}
               />
               <input
                 type="text"
@@ -222,7 +222,7 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
                 placeholder="DNI"
                 value={formData.dni}
                 onChange={handleChange}
-                disabled={totalInscritos >= 100}
+                disabled={cuposAgotados}
               />
               <input
                 type="email"
@@ -231,10 +231,10 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
                 value={formData.correo}
                 onChange={handleChange}
                 required
-                disabled={totalInscritos >= 100}
+                disabled={cuposAgotados}
               />
 
-              {totalInscritos >= 100 ? (
+              {cuposAgotados ? (
                 <button className="modal-btn" style={{ background: "#333", color: "#666", cursor: "not-allowed" }} disabled>
                   Inscripciones Cerradas
                 </button>
