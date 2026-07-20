@@ -3,7 +3,7 @@ import "./ModalSimple.css";
 import emailjs from "@emailjs/browser";
 
 // 🎯 CONFIGURACIÓN CENTRALIZADA: Modifica este número y cambiará en toda tu app
-const LIMITE_CUPOS = 3; 
+const LIMITE_CUPOS = 5; 
 
 const initialForm = {
   nombres: "",
