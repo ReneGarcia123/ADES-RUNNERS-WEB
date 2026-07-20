@@ -193,10 +193,10 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
 
               {/* Contador de Cupos */}
               <div className="cupos-contador" style={{ marginBottom: "15px", color: "#00ffcc", fontSize: "14px", textAlign: "left" }}>
-                {totalInscritos >= 100 ? (
+                {totalInscritos >= 3 ? (
                   <span style={{ color: "#ff4444", fontWeight: "bold" }}>⚠️ Cupos agotados (100/100)</span>
                 ) : (
-                  <span>Cupos registrados: <strong>{totalInscritos} / 100</strong></span>
+                  <span>Cupos registrados: <strong>{totalInscritos} / 3</strong></span>
                 )}
               </div>
 
