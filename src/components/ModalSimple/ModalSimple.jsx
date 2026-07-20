@@ -123,7 +123,7 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
         correo: formData.correo,
         telefono: formData.telefono,
         talla: formData.talla,
-        sugerencia: formData.sugerencia || null,
+        sugerencia: formData.sugerencia.trim() !== "" ? formData.sugerencia : "Ninguna",
         evento: eventData?.title || "Aniversario ADES",
       };
 
