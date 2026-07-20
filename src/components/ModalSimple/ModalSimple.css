@@ -1,0 +1,88 @@
+.checkbox-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  padding: 18px;
+
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.04);
+
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 18px !important;
+  min-width: 18px !important;
+  max-width: 18px !important;
+
+  height: 18px !important;
+
+  margin-top: 3px;
+
+  flex: none;
+
+  accent-color: #00ffcc;
+}
+
+.checkbox-item span {
+  color: white;
+
+  line-height: 1.5;
+}
+
+.modal-container {
+  max-height: 90vh;
+
+  overflow-y: visible;
+
+  overflow-x: visible;
+}
+
+.modal-actions button {
+  min-width: 0;
+}
+
+.modal-step textarea[name="sugerencia"] {
+  width: 100%;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: white;
+  font-family: inherit; /* Hereda la fuente de tu proyecto */
+  font-size: 15px;
+  line-height: 1.5;
+  outline: none;
+  resize: none; /* Evita que el usuario estire el cuadro rompiendo el diseño */
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Efecto Focus al hacer clic dentro del textarea */
+.modal-step textarea[name="sugerencia"]:focus {
+  border-color: rgba(0, 255, 204, 0.4); /* Color verde cian (#00ffcc) sutil */
+}
+
+/* Estilo para el texto de ayuda (Placeholder) */
+.modal-step textarea[name="sugerencia"]::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+
+@media (max-width: 480px) {
+
+  .modal-container {
+    padding-bottom: 120px;
+    overflow-y: auto;
+    overflow-x: visible;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+}

@@ -2,13 +2,12 @@ import React from 'react';
 import EventHero from '../../components/EventHero/EventHero.jsx';
 import data_event_hero_aniversario from '../../components/EventHero/data_event_hero_aniversario.jsx';
 import Countdown from "../../components/CountDown/CountDown.jsx";
-import EventsSection from "../../components/Events/EventsSection.jsx";
 import eventsData from '../../components/Events/Events.js';
 import Categories from '../../components/Categories/Categories.jsx';
 import event_aniversario_categories from "../../components/Categories/event_aniversario_categories.jsx"
 import RouteMap from '../../components/RouteMap/RouteMap.jsx';
 import event_aniversario_map from "../../components/RouteMap/event_aniversario_map.js"
-
+import EventsSection from '../../components/Events/EventsSection.jsx';
 import IncludesSlider from '../../components/IncludesSlider/IncludesSlider.jsx';
 import event_aniversaro_slider from '../../components/IncludesSlider/event_aniversaro_slider.js';
 import SponsorsLoop from '../../components/SponsorsLoop/SponsorsLoop.jsx';
@@ -42,6 +41,12 @@ function AniversarioAdes(){
             targetDate="2026-08-06T07:00:00"
        />  
 
+       <EventsSection
+          data={eventsData}
+          modalType="simple"
+       />
+       
+
         {/*
         <ChampionsSlider
             data={championsData}
@@ -62,12 +67,6 @@ function AniversarioAdes(){
         />
         
 
-
-       {/* Habilitar para inscripciones
-       <EventsSection
-          data={eventsData}
-       />
-       */}
        
 
 

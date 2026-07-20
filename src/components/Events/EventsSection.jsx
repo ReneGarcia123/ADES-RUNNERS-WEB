@@ -2,11 +2,12 @@ import "./Events.css";
 
 import { useState } from "react";
 
-import EventModal
-from "../EventModal/EventModal";
+import EventModal from "../EventModal/EventModal"; //Eventos Carreras
+
+import ModalSimple from "../ModalSimple/ModalSimple"; //Eventos Pequeños
 
 export default function EventsSection({
-  data,
+  data, modalType="completo"
 }) {
 
   const [isModalOpen, setIsModalOpen] =
@@ -49,7 +50,9 @@ export default function EventsSection({
 
         <div className="events-grid">
 
-          {data.events.map((event) => (
+          {data.events
+            .filter(event => event.modal === modalType)
+            .map((event) => (
 
             <div
               key={event.id}
@@ -93,13 +96,21 @@ export default function EventsSection({
         </div>
 
       </section>
+        {modalType === "completo" && (
+          <EventModal
+            isOpen={isModalOpen}
+            onClose={closeModal}
+            event={selectedEvent}
+          />
+        )}
 
-      <EventModal
-        isOpen={isModalOpen}
-        onClose={closeModal}
-        event={selectedEvent}
-      />
-
+        {modalType === "simple" && (
+          <ModalSimple
+            isOpen={isModalOpen}
+            onClose={closeModal}
+            event={selectedEvent}
+          />
+        )}
     </>
 
   );

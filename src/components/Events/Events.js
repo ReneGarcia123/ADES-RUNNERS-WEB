@@ -3,7 +3,7 @@ const eventsData = {
   title: "INSCRIPCIONES",
 
   description:
-    "Inscríbete ahora, inscripciones hasta el 20/06/26 o hasta agotar inscripciones",
+    "Inscríbete ahora, y asegura tu lugar en la carrera. ¡No te quedes fuera de esta experiencia única!",
 
   events: [
 
@@ -19,7 +19,27 @@ const eventsData = {
         "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780077317/Carrera_Conmemorativa_pro_el_dia_del_padre_e2k2el.png",
 
       button: "Inscribirme",
+
+      modal:"completo",
     },
+
+    {
+      id: 2,
+
+      title: "ANIVERSARIO ADES",
+
+      description:
+        "Inscribite y disfruta de nuestro TROTE CONMEMORATIVO 5K",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1784394886/Trote_Conmemorativo_por_el_2do_Aniversario_msjndt.png",
+
+      button: "Inscribirme",
+
+      modal:"simple",
+    },
+
+
 
   ],
 
