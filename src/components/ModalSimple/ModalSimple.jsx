@@ -13,6 +13,7 @@ const initialForm = {
   telefono: "",
   talla: "",
   sugerencia: "",
+  genero:"",
 };
 
 export default function EventRegisterModal({ isOpen, onClose, eventData }) {
@@ -80,7 +81,8 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
         formData.nombres.trim() &&
         formData.apellidos.trim() &&
         formData.dni.trim() &&
-        formData.correo.trim();
+        formData.correo.trim()&&
+        formData.genero.trim();
 
       if (!isValid) {
         alert("Completa todos los campos.");
@@ -122,6 +124,7 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
         dni: formData.dni,
         correo: formData.correo,
         telefono: formData.telefono,
+        genero:formData.genero,
         talla: formData.talla,
         sugerencia: formData.sugerencia.trim() !== "" ? formData.sugerencia : "Ninguna",
         evento: eventData?.title || "Aniversario ADES",
@@ -154,6 +157,7 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
           apellidos: formData.apellidos,
           dni: formData.dni,
           telefono: formData.telefono,
+          genero:formData.genero,
           talla: formData.talla,
           correo: formData.correo, 
         },
@@ -233,6 +237,18 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
                 required
                 disabled={cuposAgotados}
               />
+              <select
+                name="genero"
+                value={formData.genero}
+                onChange={handleChange}
+                disabled={cuposAgotados}
+              >
+                <option value="">Selecciona tu género</option>
+                <option value="Damas">Femenino</option>
+                <option value="Varones">Masculino</option>
+
+              </select>
+
 
               {cuposAgotados ? (
                 <button className="modal-btn" style={{ background: "#333", color: "#666", cursor: "not-allowed" }} disabled>

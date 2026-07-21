@@ -40,11 +40,11 @@ function AniversarioAdes(){
             subtitle="¡No te pierdas la oportunidad de celebrar con nosotros! VIVE LA EXPERIENCIA DE NUESTRO ANIVERSARIO ADES RUNNERS DEL SUR"
             targetDate="2026-08-06T07:00:00"
        />  
-        {/*
+        
        <EventsSection
           data={eventsData}
           modalType="simple"
-       />*/}
+       />
        
 
         {/*
