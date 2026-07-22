@@ -22,6 +22,16 @@ const event_aniversario_sponsors = {
         "https://www.facebook.com/CentrodeterapiafisicayrehabilitacionCAIDM",
     },
 
+    {    
+      name: "INCARD",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1784733158/WhatsApp_Image_2026-07-22_at_10.09.26_AM_yx8miv.jpg",
+
+      link:
+        "https://www.facebook.com/share/1EJQpz4KFC/?mibextid=wwXIfr",
+    },
+
   ],
 };
 
