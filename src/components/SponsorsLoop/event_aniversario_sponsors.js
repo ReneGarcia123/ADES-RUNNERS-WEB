@@ -32,6 +32,16 @@ const event_aniversario_sponsors = {
         "https://www.facebook.com/share/1EJQpz4KFC/?mibextid=wwXIfr",
     },
 
+    {    
+      name: "ALUMINIOS GEZUKO",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1784762900/ALUMINIOS_supmgc.png",
+
+      link:
+        "https://wa.me/+51910969884",
+    },
+
   ],
 };
 
