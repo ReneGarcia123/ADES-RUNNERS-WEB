@@ -58,8 +58,6 @@ const historyTimelineData = {
       image: "https://res.cloudinary.com/ddt2qucrw/image/upload/v1784921423/h9_obxlmu.jpg"
     },
 
-
-
     {
       year: "2026, junio",
       title: "Conmemoración al día del Padre",
@@ -67,6 +65,15 @@ const historyTimelineData = {
         "Celebramos el día del padre organizando un trote conmemorativo para ellos",
 
       image: "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780165296/Carrera_Conmemorativa_pro_el_dia_del_padre_Collage_mhgllc.png"
+    },
+
+    {
+      year: "Actualidad",
+      title: "Comprometidos con el deporte",
+      description:
+        "Continuamos con nuestro lineamento deportivo, motivando y entrenando juntos kilómetro a kilómetro",
+
+      image: "https://res.cloudinary.com/ddt2qucrw/image/upload/v1784932409/h10_x1x3uh.jpg"
     },
 
   ]
