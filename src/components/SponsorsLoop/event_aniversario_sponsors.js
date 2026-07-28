@@ -42,6 +42,16 @@ const event_aniversario_sponsors = {
         "https://wa.me/+51910969884",
     },
 
+    {    
+      name: "IMPORTADORA YANITA",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1785201854/yanita_vmftdw.png",
+
+      link:
+        "https://www.tiktok.com/@importadorayanita?_r=1&_t=ZS-98OJZUGUnRt",
+    },
+
   ],
 };
 

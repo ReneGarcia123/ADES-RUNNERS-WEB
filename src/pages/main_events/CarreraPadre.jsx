@@ -55,11 +55,11 @@ function CarreraPadre(){
             targetDate="2026-06-21T06:00:00"
        />*/}
     
-       {/* Habilitar para inscripciones
+       {/*}
        <EventsSection
           data={eventsData}
-       />
-       */}
+       />*/}
+       
        
        <Categories
             data={event_padre_categories}
