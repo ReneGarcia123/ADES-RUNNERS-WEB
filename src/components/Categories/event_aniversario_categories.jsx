@@ -28,7 +28,7 @@ const event_aniversario_categories = {
   nameBases:"Ver punto de encuentro",
   basesLink:"https://maps.app.goo.gl/isVrHxG2UFRNLcDt7",
   nameDeslinde:"Revisar Programa de Actividades",
-  deslindeLink:"https://drive.google.com/file/d/17Q7_OW-z2BvTpMw7JfIVGFeKymWno5Ni/view?usp=sharing",
+  deslindeLink:"https://res.cloudinary.com/ddt2qucrw/image/upload/v1785203164/45454_hyp36b.jpg",
 
   items: [
 
