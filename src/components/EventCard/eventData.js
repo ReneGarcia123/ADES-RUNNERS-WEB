@@ -4,7 +4,7 @@ const eventsData = [
   {
     id: 1,
 
-    title: "TROTE CONMEMORATIVO 4TO ANIVERSARIO ADES",
+    title: "TROTE CONMEMORATIVO 2DO ANIVERSARIO ADES",
 
     image:
       "https://res.cloudinary.com/ddt2qucrw/image/upload/v1784394886/Trote_Conmemorativo_por_el_2do_Aniversario_msjndt.png",
@@ -19,7 +19,7 @@ const eventsData = [
     link:"/aniversario-ades",
 
     descripcion:
-      "Participan en nuestro Trote Conmemorativo por nuestro 4to Aniversario de ADES RUNNERS DEL SUR",
+      "Participan en nuestro Trote Conmemorativo por nuestro 2do Aniversario de ADES RUNNERS DEL SUR",
   },
 
   {

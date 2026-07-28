@@ -13,9 +13,9 @@ function Eventos() {
       <FadeSlider slides={eventSlider}/>
       
       <Countdown
-        title="PRÓXIMO EVENTO: JUNTOS PARA SIEMPRE 13K"
-        subtitle="CORREMOS JUNTOS DEJAMOS HELLA PARA SIEMPRE. La cuenta regresiva ya comenzó. Carrera conmemorativa por el día del padre"
-        targetDate="2026-06-21T06:00:00"
+        title="PRÓXIMO EVENTO: TROTE CONMEMORATIVO 5K"
+        subtitle="Celebramos nuestro 2do Aniversario ADES RUNNERS DEL SUR con un trote conmemorativo"
+        targetDate="2026-08-06T06:00:00"
       />
 
       <EventCard
