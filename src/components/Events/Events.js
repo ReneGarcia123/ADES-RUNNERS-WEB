@@ -39,7 +39,21 @@ const eventsData = {
       modal:"simple",
     },
 
+    {
+      id: 3,
 
+      title: "DIPLOMA ANIVERSARIO ADES",
+
+      description:
+        "Visualiza tu diploma en este evento",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1784394886/Trote_Conmemorativo_por_el_2do_Aniversario_msjndt.png",
+
+      button: "Quiero ver mi diploma",
+
+      modal:"resultado-simple",
+    },
 
   ],
 

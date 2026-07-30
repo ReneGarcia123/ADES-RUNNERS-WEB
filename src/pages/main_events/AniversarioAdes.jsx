@@ -12,7 +12,6 @@ import IncludesSlider from '../../components/IncludesSlider/IncludesSlider.jsx';
 import event_aniversaro_slider from '../../components/IncludesSlider/event_aniversaro_slider.js';
 import SponsorsLoop from '../../components/SponsorsLoop/SponsorsLoop.jsx';
 import event_aniversario_sponsors from '../../components/SponsorsLoop/event_aniversario_sponsors.js';
-
 import ChampionsSlider from '../../components/ChampionsSlider/ChampionsSlider.jsx';
 import championsData from '../../components/ChampionsSlider/championsData.js';  
 
@@ -45,6 +44,10 @@ function AniversarioAdes(){
           data={eventsData}
           modalType="simple"
        />
+       <EventsSection
+            data={eventsData}
+            modalType="resultado-simple"
+        />
        
 
         {/*

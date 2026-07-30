@@ -3,7 +3,7 @@ import "./Events.css";
 import { useState } from "react";
 
 import EventModal from "../EventModal/EventModal"; //Eventos Carreras
-
+import ModalSimpleResultado from "../ResultadosSimpleModal/ModalSimpleResultado"; //Resultado Simple
 import ModalSimple from "../ModalSimple/ModalSimple"; //Eventos Pequeños
 
 export default function EventsSection({
@@ -106,6 +106,14 @@ export default function EventsSection({
 
         {modalType === "simple" && (
           <ModalSimple
+            isOpen={isModalOpen}
+            onClose={closeModal}
+            event={selectedEvent}
+          />
+        )}
+
+        {modalType === "resultado-simple" && (
+          <ModalSimpleResultado
             isOpen={isModalOpen}
             onClose={closeModal}
             event={selectedEvent}
