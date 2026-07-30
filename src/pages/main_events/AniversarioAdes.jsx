@@ -44,11 +44,13 @@ function AniversarioAdes(){
           data={eventsData}
           modalType="simple"
        />
+
+       {/*
        <EventsSection
             data={eventsData}
             modalType="resultado-simple"
         />
-       
+       */}
 
         {/*
         <ChampionsSlider
