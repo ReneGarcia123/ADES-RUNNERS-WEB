@@ -4,9 +4,8 @@ const event_aniversario_map = {
     "RECORRIDO TROTE 5K",
 
   link:
-  "https://es.wikiloc.com/wikiloc/embedv2.do?id=274823368&elevation=off&images=on&maptype=H",
+  "https://es.wikiloc.com/wikiloc/embedv2.do?id=276965573&elevation=off&images=on&maptype=H",
   
-
   available: true,
 
   previewImage:

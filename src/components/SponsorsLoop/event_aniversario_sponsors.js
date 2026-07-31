@@ -72,6 +72,26 @@ const event_aniversario_sponsors = {
         "https://www.facebook.com/share/16rzqRG6cY/ ",
     },
 
+    {
+      name: "TIMON EVENTOS",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1781482101/1749446919_Diseosinttulo1_gzq3us.png",
+
+      link:
+        "https://timon.pe/",
+    },
+
+    {
+      name: "UNA MONTAÑA PARA TODOS",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780423170/1_dh83qq.png",
+
+      link:
+        "https://web.facebook.com/profile.php?id=61573263676191",
+    },
+
   ],
 };
 
