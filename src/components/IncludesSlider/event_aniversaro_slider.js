@@ -10,7 +10,7 @@ const includesSliderData = {
 
     "https://res.cloudinary.com/ddt2qucrw/image/upload/v1784398387/trofeos_y_medallas_haep1s.jpg",
 
-    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1784399334/polos_gratis_uelpdt.jpg",
+    "https://res.cloudinary.com/ddt2qucrw/image/upload/v1785536949/POLOS_GRATIS_2_dkly5n.jpg",
 
     "https://res.cloudinary.com/ddt2qucrw/image/upload/v1784399556/refrigeio_b9ntcr.jpg",
 
