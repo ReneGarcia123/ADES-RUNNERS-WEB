@@ -29,7 +29,7 @@ const eventsData = {
       title: "INSCRIPCIÓN LIBRE",
 
       description:
-        "Inscribite y disfruta de nuestro TROTE CONMEMORATIVO 5K",
+        "Inscribite y disfruta de nuestro TROTE CONMEMORATIVO 5K de forma libre(incluye agua y fruta).",
 
       image:
         "https://res.cloudinary.com/ddt2qucrw/image/upload/v1784394886/Trote_Conmemorativo_por_el_2do_Aniversario_msjndt.png",
