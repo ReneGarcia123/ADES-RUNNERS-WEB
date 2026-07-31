@@ -52,6 +52,26 @@ const event_aniversario_sponsors = {
         "https://www.tiktok.com/@importadorayanita?_r=1&_t=ZS-98OJZUGUnRt",
     },
 
+    {
+      name: "JOSEMA FOTO SPORT",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780423171/7_lhgdxx.png",
+
+      link:
+        "https://web.facebook.com/jose.ma.177741",
+    },
+
+    {
+      name: "AGUA ANDINA",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1785463242/AGUA_ANDINA_fkx8xu.png",
+
+      link:
+        "https://www.facebook.com/share/16rzqRG6cY/ ",
+    },
+
   ],
 };
 
