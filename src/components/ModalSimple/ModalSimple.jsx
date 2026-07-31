@@ -218,7 +218,7 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
       if (!response.ok) {
         throw new Error("Error al insertar los datos en Supabase");
       }
-{/*
+
       // 📧 2. Envío de Correo vía EmailJS (Solo los 6 campos solicitados)
       await emailjs.send(
         "service_6b38k6g",
@@ -237,7 +237,7 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
         },
         "LdCqh-AJ8g67kmRHt"
       );
-*/}
+
       setLoading(false);
       setSuccess(true);
     } catch (error) {
