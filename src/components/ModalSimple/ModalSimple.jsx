@@ -3,17 +3,17 @@ import "./ModalSimple.css";
 import emailjs from "@emailjs/browser";
 
 // 🎯 CONFIGURACIÓN CENTRALIZADA: Modifica este número y cambiará en toda tu app
-const LIMITE_CUPOS = 100; 
+const LIMITE_CUPOS = 5; 
 
 const initialForm = {
+  dni: "",
   nombres: "",
   apellidos: "",
-  dni: "",
   correo: "",
   telefono: "",
-  talla: "",
-  sugerencia: "",
-  genero:"",
+  genero: "",
+  equipo: "",
+  otroEquipo: "",
 };
 
 export default function EventRegisterModal({ isOpen, onClose, eventData }) {
@@ -27,6 +27,8 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [formData, setFormData] = useState(initialForm);
+  const [verificandoDni, setVerificandoDni] = useState(false);
+  const [mensajeError, setMensajeError] = useState("");
 
   // Obtener el conteo real desde Supabase cuando se abre el modal
   useEffect(() => {
@@ -34,7 +36,7 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
 
     const obtenerContador = async () => {
       try {
-        const SUPABASE_URL = "https://sypqitqrmmkcjpwrkrpg.supabase.co/rest/v1/inscritos_aniversario_ades?select=id";
+        const SUPABASE_URL = "https://sypqitqrmmkcjpwrkrpg.supabase.co/rest/v1/inscritos_libres_aniversario_ades?select=id";
         const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5cHFpdHFybW1rY2pwd3JrcnBnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ1NjY3NzcsImV4cCI6MjEwMDE0Mjc3N30.GnyPIaOZUFoefVeDqIQBt5VTY9xpbVtL9rM58Oyc49s";
 
         const response = await fetch(SUPABASE_URL, {
@@ -63,7 +65,7 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: value,
+      [name]: name === "dni" ? value.toUpperCase().trimStart() : value,
     }));
   };
 
@@ -75,32 +77,76 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
     onClose();
   };
 
-  const nextStep = () => {
-    if (step === 1) {
-      const isValid =
-        formData.nombres.trim() &&
-        formData.apellidos.trim() &&
-        formData.dni.trim() &&
-        formData.correo.trim()&&
-        formData.genero.trim();
-
-      if (!isValid) {
-        alert("Completa todos los campos.");
-        return;
-      }
-
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(formData.correo)) {
-        alert("Ingresa un correo válido.");
-        return;
-      }
-    }
-    setStep((prev) => prev + 1);
-  };
-
   const prevStep = () => {
     setStep((prev) => prev - 1);
   };
+
+  const verificarDNI = async () => {
+
+  setMensajeError("");
+
+  const documento = formData.dni.trim().toUpperCase();
+
+  if (documento.length < 6 || documento.length > 15) {
+    setMensajeError("Ingrese un documento válido.");
+    return;
+  }
+
+  try{
+
+    setVerificandoDni(true);
+
+    const SUPABASE_URL =
+      "https://sypqitqrmmkcjpwrkrpg.supabase.co/rest/v1/inscritos_libres_aniversario_ades";
+
+    const SUPABASE_ANON_KEY =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5cHFpdHFybW1rY2pwd3JrcnBnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ1NjY3NzcsImV4cCI6MjEwMDE0Mjc3N30.GnyPIaOZUFoefVeDqIQBt5VTY9xpbVtL9rM58Oyc49s";
+
+    const response = await fetch(
+      `${SUPABASE_URL}?dni=eq.${encodeURIComponent(documento)}&select=id`,
+      {
+        headers: {
+          apikey: SUPABASE_ANON_KEY,
+          Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+        },
+      }
+    );
+
+    if(!response.ok){
+
+      throw new Error();
+
+    }
+
+    const data = await response.json();
+
+    if(data.length > 0){
+
+      setMensajeError("Este documento ya se encuentra inscrito.");
+
+      return;
+
+    }
+
+    setStep(2);
+
+  }
+
+  catch(err){
+
+    console.error(err);
+
+    setMensajeError("Error al validar el documento.");
+
+  }
+
+  finally{
+
+    setVerificandoDni(false);
+
+  }
+
+};
 
   const handleSubmit = async () => {
     // 🔒 Validación basada en la variable centralizada
@@ -109,9 +155,31 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
       return;
     }
 
-    const isValidStep2 = formData.telefono.trim() && formData.talla;
+    const isValidStep2 =
+      formData.nombres.trim() &&
+      formData.apellidos.trim() &&
+      formData.correo.trim() &&
+      formData.telefono.trim() &&
+      formData.genero &&
+      formData.equipo;
+
     if (!isValidStep2) {
-      alert("Completa todos los campos obligatorios del paso 2.");
+      alert("Completa todos los campos.");
+      return;
+    }
+
+    if (
+      formData.equipo === "Otro Equipo" &&
+      !formData.otroEquipo.trim()
+    ) {
+      alert("Escribe el nombre de tu equipo.");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(formData.correo)) {
+      alert("Ingresa un correo válido.");
       return;
     }
 
@@ -121,16 +189,19 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
       const payload = {
         nombres: formData.nombres,
         apellidos: formData.apellidos,
-        dni: formData.dni,
+        dni: formData.dni.trim().toUpperCase(),
         correo: formData.correo,
         telefono: formData.telefono,
         genero:formData.genero,
-        talla: formData.talla,
-        sugerencia: formData.sugerencia.trim() !== "" ? formData.sugerencia : "Ninguna",
+        equipo:
+          formData.equipo === "Otro Equipo"
+              ? formData.otroEquipo
+              : formData.equipo,
+
         evento: eventData?.title || "Aniversario ADES",
       };
 
-      const SUPABASE_URL = "https://sypqitqrmmkcjpwrkrpg.supabase.co/rest/v1/inscritos_aniversario_ades";
+      const SUPABASE_URL = "https://sypqitqrmmkcjpwrkrpg.supabase.co/rest/v1/inscritos_libres_aniversario_ades";
       const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN5cHFpdHFybW1rY2pwd3JrcnBnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ1NjY3NzcsImV4cCI6MjEwMDE0Mjc3N30.GnyPIaOZUFoefVeDqIQBt5VTY9xpbVtL9rM58Oyc49s";
 
       const response = await fetch(SUPABASE_URL, {
@@ -147,7 +218,7 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
       if (!response.ok) {
         throw new Error("Error al insertar los datos en Supabase");
       }
-
+{/*
       // 📧 2. Envío de Correo vía EmailJS (Solo los 6 campos solicitados)
       await emailjs.send(
         "service_6b38k6g",
@@ -155,15 +226,18 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
         {
           nombres: formData.nombres,
           apellidos: formData.apellidos,
-          dni: formData.dni,
+          dni: formData.dni.trim().toUpperCase(),
           telefono: formData.telefono,
           genero:formData.genero,
-          talla: formData.talla,
           correo: formData.correo, 
+          equipo:
+            formData.equipo === "Otro Equipo"
+                ? formData.otroEquipo
+                : formData.equipo,
         },
         "LdCqh-AJ8g67kmRHt"
       );
-
+*/}
       setLoading(false);
       setSuccess(true);
     } catch (error) {
@@ -206,92 +280,124 @@ export default function EventRegisterModal({ isOpen, onClose, eventData }) {
 
               <input
                 type="text"
-                name="nombres"
-                placeholder="Nombres"
-                value={formData.nombres}
-                onChange={handleChange}
-                disabled={cuposAgotados}
-              />
-              <input
-                type="text"
-                name="apellidos"
-                placeholder="Apellidos"
-                value={formData.apellidos}
-                onChange={handleChange}
-                disabled={cuposAgotados}
-              />
-              <input
-                type="text"
                 name="dni"
-                placeholder="DNI"
+                placeholder="Ingrese su DNI o CE"
                 value={formData.dni}
                 onChange={handleChange}
-                disabled={cuposAgotados}
+                maxLength={15}
+                disabled={cuposAgotados || verificandoDni}
               />
-              <input
-                type="email"
-                name="correo"
-                placeholder="Correo"
-                value={formData.correo}
-                onChange={handleChange}
-                required
-                disabled={cuposAgotados}
-              />
-              <select
-                name="genero"
-                value={formData.genero}
-                onChange={handleChange}
-                disabled={cuposAgotados}
-              >
-                <option value="">Selecciona tu género</option>
-                <option value="Damas">Femenino</option>
-                <option value="Varones">Masculino</option>
 
-              </select>
-
+              {mensajeError && (
+                <p className="modal-error">
+                  {mensajeError}
+                </p>
+              )}
 
               {cuposAgotados ? (
-                <button className="modal-btn" style={{ background: "#333", color: "#666", cursor: "not-allowed" }} disabled>
+
+                <button
+                  className="modal-btn"
+                  disabled
+                  style={{
+                    background:"#444",
+                    cursor:"not-allowed"
+                  }}
+                >
                   Inscripciones Cerradas
                 </button>
+
               ) : (
-                <button className="modal-btn" onClick={nextStep}>
-                  Continuar
+
+                <button
+                  className="modal-btn"
+                  onClick={verificarDNI}
+                  disabled={verificandoDni}
+                >
+                  {verificandoDni ? "Verificando..." : "Continuar"}
                 </button>
+
               )}
             </div>
-          )}
+          )}          
 
           {/* STEP 2 */}
           {step === 2 && (
             <div className="modal-step">
               <h2>Información Adicional</h2>
-              <input
-                type="tel"
-                name="telefono"
-                placeholder="Teléfono"
-                value={formData.telefono}
-                onChange={handleChange}
-              />
-              <select
-                name="talla"
-                value={formData.talla}
-                onChange={handleChange}
-              >
-                <option value="">Talla de polo</option>
-                <option value="XS">XS</option>
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-              </select>
-              <textarea
-                name="sugerencia"
-                placeholder="¿Tienes alguna sugerencia para nuestro aniversario?"
-                value={formData.sugerencia}
-                onChange={handleChange}
-                rows="3"
-              />
+                  <input
+                    type="text"
+                    name="nombres"
+                    placeholder="Nombres"
+                    value={formData.nombres}
+                    onChange={handleChange}
+                  />
+
+                  <input
+                    type="text"
+                    name="apellidos"
+                    placeholder="Apellidos"
+                    value={formData.apellidos}
+                    onChange={handleChange}
+                  />
+
+                  <input
+                    type="email"
+                    name="correo"
+                    placeholder="Correo"
+                    value={formData.correo}
+                    onChange={handleChange}
+                  />
+
+                  <input
+                    type="tel"
+                    name="telefono"
+                    placeholder="Teléfono"
+                    value={formData.telefono}
+                    onChange={handleChange}
+                  />
+
+                  <select
+                    name="genero"
+                    value={formData.genero}
+                    onChange={handleChange}
+                  >
+                      <option value="">Seleccione género</option>
+                      <option value="Masculino">Masculino</option>
+                      <option value="Femenino">Femenino</option>
+                  </select>
+
+                  <select
+                    name="equipo"
+                    value={formData.equipo}
+                    onChange={handleChange}
+                  >
+                      <option value="">Seleccione equipo</option>
+
+                      <option value="ADES">ADES</option>
+                      <option value="CIMA RUNNERS">CIMA RUNNERS</option>
+                      <option value="ALTURA">ALTURA</option>
+                      <option value="ALPHA">ALPHA</option>
+                      <option value="CRAZY RUNNING">CRAZY RUNNING</option>
+                      <option value="CRAZY RUNNING">CRAZY RUNNING</option>
+                      <option value="IMPERIO">IMPERIO</option>
+                      <option value="LONCCOS">LONCCOS</option>
+                      <option value="IRONSIDE">IRONSIDE</option>
+                      <option value="RUNNATICOS">RUNNATICOS</option>
+                      <option value="BEER RUN">BEER RUN</option>
+                      <option value="Otro Equipo">Otro Equipo</option>
+                  </select>
+
+                  {formData.equipo === "Otro Equipo" && (
+                      <input
+                          type="text"
+                          name="otroEquipo"
+                          placeholder="Nombre de tu equipo"
+                          value={formData.otroEquipo}
+                          onChange={handleChange}
+                      />
+                  )}
+  
               <div className="modal-actions">
                 <button className="modal-btn-secondary" onClick={prevStep}>
                   Volver

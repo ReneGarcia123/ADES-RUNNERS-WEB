@@ -26,7 +26,7 @@ const eventsData = {
     {
       id: 2,
 
-      title: "ANIVERSARIO ADES",
+      title: "INSCRIPCIÓN LIBRE",
 
       description:
         "Inscribite y disfruta de nuestro TROTE CONMEMORATIVO 5K",
