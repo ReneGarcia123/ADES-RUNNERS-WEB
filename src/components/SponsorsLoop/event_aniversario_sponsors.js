@@ -112,6 +112,16 @@ const event_aniversario_sponsors = {
         "https://www.powerun.pe/?fbclid=IwY2xjawSlhHpleHRuA2FlbQIxMABicmlkETEwakd3ZU1pTVlFRFRpVXBlc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHjtKfkvWaIpRz08Ewt4HDllCqRzqFXGUD9L0lCAA5O3VP1Y7LmXu35HhbGqE_aem_5Kdy9djMcnmB1VDDdWrF6g",
     },
 
+    {
+      name: "RUNNING ELECTRIC",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1780532443/11_zq08ne.png",
+
+      link:
+        "https://www.instagram.com/running.aqp?igsh=MTE1dGoyeXM2ZGx1cQ==",
+    },
+
   ],
 };
 
