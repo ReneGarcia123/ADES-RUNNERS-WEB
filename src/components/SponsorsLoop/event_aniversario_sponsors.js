@@ -92,6 +92,26 @@ const event_aniversario_sponsors = {
         "https://web.facebook.com/profile.php?id=61573263676191",
     },
 
+    {
+      name: "ANITA ESPECERIAS",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1785630608/ANITA_ESPECERIAS_ribcnv.png",
+
+      link:
+        "https://wa.me/+51935279620",
+    },
+
+    {
+      name: "POWER RUN",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1782096941/17_fzeifo.png",
+
+      link:
+        "https://www.powerun.pe/?fbclid=IwY2xjawSlhHpleHRuA2FlbQIxMABicmlkETEwakd3ZU1pTVlFRFRpVXBlc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHjtKfkvWaIpRz08Ewt4HDllCqRzqFXGUD9L0lCAA5O3VP1Y7LmXu35HhbGqE_aem_5Kdy9djMcnmB1VDDdWrF6g",
+    },
+
   ],
 };
 
