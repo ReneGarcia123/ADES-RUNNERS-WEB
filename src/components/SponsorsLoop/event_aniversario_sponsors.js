@@ -16,7 +16,7 @@ const event_aniversario_sponsors = {
       name: "CAIDM",
 
       image:
-        "https://scontent.faqp2-3.fna.fbcdn.net/v/t39.30808-6/362924074_748065203995959_6644246663628653503_n.jpg?stp=dst-jpg_tt6&cstp=mx720x720&ctp=s720x720&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHfZudIWBhfw7LKyuOIObJTRCSaNVPMHupEJJo1U8we6rIKG5lnNVB-Y658_gpy2Bqu_38GkP81zMp3Olc9USbV&_nc_ohc=OhvNCWNnhyUQ7kNvwGf5l5o&_nc_oc=AdqLHI8zmQ0yGItaguK3-zVDFQDKL3sfucm4wnq8KrAzBiqMdiFGXrbQZBRxxNknug8&_nc_zt=23&_nc_ht=scontent.faqp2-3.fna&_nc_gid=HNg9NPRzxms6O_EQ4d-oyg&_nc_ss=7b2a8&oh=00_AQBkHmpOniWbwbiandJliWcUtMOCiGOIeL3-xu4PmBRTlQ&oe=6A619C38",
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1785783385/CAIDM_q6zddx.png",
 
       link:
         "https://www.facebook.com/CentrodeterapiafisicayrehabilitacionCAIDM",
@@ -120,6 +120,16 @@ const event_aniversario_sponsors = {
 
       link:
         "https://www.instagram.com/running.aqp?igsh=MTE1dGoyeXM2ZGx1cQ==",
+    },
+
+    {
+      name: "EVENT SPORTS",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1785796521/EVENT_SPORT_pzaafq.jpg",
+
+      link:
+        "https://wa.me/+51974574245",
     },
 
   ],

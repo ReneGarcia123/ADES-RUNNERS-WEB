@@ -41,7 +41,7 @@ export default function ResultadoModal({ isOpen, onClose }) {
       const data = await response.json();
 
       if (data.length === 0) {
-        setMensaje("No se encontró ningún diploma para ese DNI.");
+        setMensaje("No se encontró ningún diploma para ese DOCUMENTO.");
       } else {
         setResultado(data[0]);
       }

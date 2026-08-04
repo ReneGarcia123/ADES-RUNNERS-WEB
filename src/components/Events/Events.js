@@ -1,9 +1,9 @@
 const eventsData = {
 
-  title: "INSCRIPCIONES",
+  title: "DIPLOMA - ADES",
 
   description:
-    "Inscríbete ahora, y asegura tu lugar en la carrera. ¡No te quedes fuera de esta experiencia única!",
+    "Visualiza tu diploma en este evento, y comparte tu logro con tus amigos y familiares. ¡Celebra tu participación en nuestro aniversario ADES Runners del Sur!",
 
   events: [
 

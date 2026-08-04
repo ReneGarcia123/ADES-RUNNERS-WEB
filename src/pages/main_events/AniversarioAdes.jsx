@@ -40,17 +40,18 @@ function AniversarioAdes(){
             targetDate="2026-08-06T07:00:00"
        />  
         
+    {/*
        <EventsSection
           data={eventsData}
           modalType="simple"
        />
-
-       {/*
+    */}
+       
        <EventsSection
             data={eventsData}
             modalType="resultado-simple"
         />
-       */}
+       
 
         {/*
         <ChampionsSlider
