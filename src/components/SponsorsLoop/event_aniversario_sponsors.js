@@ -132,6 +132,16 @@ const event_aniversario_sponsors = {
         "https://wa.me/+51974574245",
     },
 
+    {
+      name: "FUXXION INDEPENDIENTE",
+
+      image:
+        "https://res.cloudinary.com/ddt2qucrw/image/upload/v1785961736/WhatsApp_Image_2026-08-03_at_5.16.48_PM_oxiz2g.jpg",
+
+      link:
+        "https://wa.me/+51987959411",
+    },
+
   ],
 };
 
